@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.1_4aa884c062ed40e2ea81ccaa125fcc41eb04868d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.1_8f6b7989d1d8658f01010e9b335c0f6171cbf4d9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.1_3a81624e8dda45596a4f8f481de740a903aa41d5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.1_91104b5ba8e1da8cb3f3e14500a2f764d3c6994f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c59d92724930e507c15e208d61f7b276f27d1341">
+        <dex dex="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_18eaf65eb8a8ec1d14e0e3d897596e8c3bbc05c6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.1_25dcceaa874e5d595983d9bf5a71940d969eb4a3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.1_86022522cff0a4885c6d60365db40d00c60bf967/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.1_0ee90e31d50445b742ca490e3eeaf3e9325383b6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.1_8dba41ae93b288a0a7ee8edb102cb0fb2c7d27c1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.1_277cd3cb7e4d02b7e46ed6b6b5a52158feced51b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5597311ff34bc5ab5c9dbd9cd2055b616ceed6e6">
+        <dex dex="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_2bc18dd4dc3a2160e931067bec97c17bc14e28f8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/Users/Robertsquared/Desktop/CS63D/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.1_ec959a85ee3e3a74e349c86f45eb9b83cb079136/classes.dex" />
+    </item>
+
+</items>
