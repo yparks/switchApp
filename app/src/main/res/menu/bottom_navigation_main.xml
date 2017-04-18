@@ -7,7 +7,7 @@
         android:enabled="true"
         android:icon="@drawable/ic_home"
         android:title="@string/home"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
     <!--<item-->
         <!--android:id="@+id/action_history"-->
@@ -21,12 +21,12 @@
         android:enabled="true"
         android:icon="@drawable/ic_favorite"
         android:title="@string/favorites"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_az"
         android:enabled="true"
         android:icon="@drawable/ic_hamburger"
         android:title="@string/az"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 </menu>
