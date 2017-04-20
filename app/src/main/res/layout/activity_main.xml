@@ -1,37 +1,43 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:columnCount="4"
+    android:rowCount="6">
 
     <TextView
         android:id="@+id/text_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_row="0"
+        android:layout_rowSpan="6"
         android:text="@string/home" />
 
     <!--<TextView-->
-        <!--android:id="@+id/text_history"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--android:text="@string/history"-->
-        <!--android:visibility="gone" />-->
+    <!--android:id="@+id/text_history"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:text="@string/history"-->
+    <!--android:visibility="gone" />-->
 
     <TextView
         android:id="@+id/text_favorites"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:text="@string/favorites"
+        android:layout_row="0"
+        android:layout_rowSpan="6"
         android:visibility="gone" />
 
     <TextView
         android:id="@+id/text_az"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:text="@string/az"
+        android:layout_row="0"
+        android:layout_rowSpan="6"
         android:visibility="gone" />
 
     <android.support.design.widget.BottomNavigationView
@@ -39,9 +45,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
         app:itemBackground="@color/colorPrimary"
         app:itemIconTint="@color/textColorPrimary"
         app:itemTextColor="@color/textColorPrimary"
-        app:menu="@menu/bottom_navigation_main" />
-</RelativeLayout>
+        app:menu="@menu/bottom_navigation_main"
+        android:layout_column="0"
+        android:layout_columnSpan="4"/>
+</GridLayout>
