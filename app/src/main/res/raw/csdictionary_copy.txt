@@ -1,0 +1,109 @@
+&&
+⏣
+<p>The operator <span class="snippet" style="font-weight: bold;">&amp;&amp;</span> indicates the <em>boolean and</em> operation. (It is sometimes called <em>logical and</em>.) The result is <span class="snippet" style="font-weight: bold;">true</span> if and only if both of the operands are <span class="snippet" style="font-weight: bold;">true</span>.</p>
+<p>Consider the following example:</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_java5" style="width: 100%; height: auto; border: 1px solid #054b6e; background: #f8f8f8;">
+<div class="java5" style="border-collapse: collapse; width: 100%;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><span style="color: #003399; font-weight: bold;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">5</span> <span style="color: #339933;">&gt;</span> <span style="color: #cc66cc;">2</span> <span style="color: #339933;">&amp;&amp;</span> <span style="color: #cc66cc;">1</span> <span style="color: #339933;">&gt;</span> <span style="color: #cc66cc;">0</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// This will print true.</span></span>
+<span style="vertical-align: top;"><span style="color: #003399; font-weight: bold;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">5</span> <span style="color: #339933;">&gt;</span> <span style="color: #cc66cc;">6</span> <span style="color: #339933;">&amp;&amp;</span> <span style="color: #cc66cc;">1</span> <span style="color: #339933;">&gt;</span> <span style="color: #cc66cc;">0</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// This will print false.</span></span>
+<span style="vertical-align: top;"><span style="color: #000000; font-weight: bold;">if</span> <span style="color: #009900;">(</span><span style="color: #cc66cc;">10</span> <span style="color: #339933;">&gt;</span> <span style="color: #cc66cc;">5</span> <span style="color: #339933;">&amp;&amp;</span> <span style="color: #cc66cc;">5</span> <span style="color: #339933;">&gt;</span> <span style="color: #cc66cc;">10</span><span style="color: #009900;">)</span></span>
+<span style="vertical-align: top;"><span style="color: #009900;">{</span></span>
+<span style="vertical-align: top;">    <span style="color: #003399; font-weight: bold;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Huh?!"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>     <span style="color: #666666; font-style: italic;">// This will not be printed.</span></span>
+<span style="vertical-align: top;"><span style="color: #009900;">}</span></span></pre>
+</div>
+</div>
+</div>
+<p> <br>See also <span class="snippet" style="font-weight: bold;">||</span>.</p>
+⏣
+null
+⏣
+||
+⏣
+<p>The operator <span class="snippet" style="font-weight: bold;">||</span> indicates the <em>boolean or</em> operation. (It is sometimes called <em>logical or</em>.) The result is <span class="snippet" style="font-weight: bold;">true</span> unless both of the operands are <span class="snippet" style="font-weight: bold;">false</span>.</p>
+<p>Consider this example:</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_java5" style="overflow: auto; width: 100%; height: auto; border: 1px solid #054b6e; background: #f8f8f8;">
+<div class="java5" style="border-collapse: collapse; width: 100%;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><span style="color: #003399; font-weight: bold;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">5</span> <span style="color: #339933;">&gt;</span> <span style="color: #cc66cc;">2</span> || <span style="color: #cc66cc;">1</span> == <span style="color: #cc66cc;">0</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// This will print true.</span></span>
+<span style="vertical-align: top;"><span style="color: #003399; font-weight: bold;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">5</span> <span style="color: #339933;">&gt;</span> <span style="color: #cc66cc;">6</span> <span style="color: #339933;">&amp;&amp;</span> <span style="color: #cc66cc;">1</span> <span style="color: #339933;">&lt;</span> <span style="color: #cc66cc;">0</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>   <span style="color: #666666; font-style: italic;">// This will print false.</span></span>
+<span style="vertical-align: top;"><span style="color: #000000; font-weight: bold;">if</span> <span style="color: #009900;">(</span><span style="color: #cc66cc;">1</span> == <span style="color: #cc66cc;">2</span> || <span style="color: #cc66cc;">2</span> == <span style="color: #cc66cc;">3</span><span style="color: #009900;">)</span></span>
+<span style="vertical-align: top;"><span style="color: #009900;">{</span></span>
+<span style="vertical-align: top;">    <span style="color: #003399; font-weight: bold;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Huh?!"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>     <span style="color: #666666; font-style: italic;">// This will not be printed.</span></span>
+<span style="vertical-align: top;"><span style="color: #009900;">}</span></span></pre>
+</div>
+</div>
+</div>
+<p> <br>See also <span class="snippet" style="font-weight: bold;">&amp;&amp;</span>.</p>
+⏣
+null
+⏣
+abstract
+⏣
+<p>The keyword <span class="snippet" style="font-weight: bold;">abstract</span> is used when declaring an <span class="snippet" style="font-weight: bold;">abstract</span> method or an <span class="snippet" style="font-weight: bold;">abstract</span> class.</p>
+⏣
+keywords
+⏣
+abstract class
+⏣
+<p>An abstract class is a class that cannot be instantiated. It must include the keyword "<span class="snippet" style="font-weight: bold;">abstract</span>" in its declaration:</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_java5" style="overflow: auto; width: 100%; height: auto; border: 1px solid #054b6e; background: #f8f8f8;">
+<div class="java5" style="border-collapse: collapse; width: 100%;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> <span style="color: #000000; font-weight: bold;">abstract</span> ArrayProcessor <span style="color: #009900;">{</span></span>
+<span style="vertical-align: top;">  <span style="color: #666666; font-style: italic;">// body removed</span></span>
+<span style="vertical-align: top;"><span style="color: #009900;">}</span></span></pre>
+</div>
+</div>
+</div>
+<p> <br>A class must be abstract if it either:</p>
+<ul>
+<li>declares an abstract method</li>
+<li>inherits (but does not override) an abstract method</li>
+</ul>
+<p>Abstract classes should have concrete subclasses that implement the abstract methods.</p>
+⏣
+null
+⏣
+abstract method
+⏣
+<p>A method is abstract if it:</p>
+<ul>
+<li>is declared with the keyword "<span class="snippet" style="font-weight: bold;">abstract</span>" and</li>
+<li>does not have a body</li>
+</ul>
+<p>An example is:</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_java5" style="overflow: auto; width: 100%; height: auto; border: 1px solid #054b6e; background: #f8f8f8;">
+<div class="java5" style="border-collapse: collapse; width: 100%;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;">    <span style="color: #008000; font-style: italic; font-weight: bold;">/**</span>
+<span style="vertical-align: top;">     * Perform the subclass-specific function on the current number in the</span>
+<span style="vertical-align: top;">     * array, returning the intermediate result.</span>
+<span style="vertical-align: top;">     * </span>
+<span style="vertical-align: top;">     * @param number the number to process</span>
+<span style="vertical-align: top;">     * @return the intermediate result of the function</span>
+<span style="vertical-align: top;">     */</span></span>
+<span style="vertical-align: top;">    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">abstract</span> <span style="color: #006600; font-weight: bold;">int</span> processNumber<span style="color: #009900;">(</span><span style="color: #006600; font-weight: bold;">int</span> number<span style="color: #009900;">)</span><span style="color: #339933;">;</span></span></pre>
+</div>
+</div>
+</div>
+<p> <br>The method is implemented by a subclass.</p>
+<p>If a class contains any abstract methods, it is an abstract class and cannot be instantiated.</p>
+<p> </p>
+⏣
+null
+⏣
+actual parameter
+⏣
+<p>An actual parameter is a value that is passed to a method or constructor. Consider the following code:</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_java5" style="overflow: auto; width: 100%; height: auto; border: 1px solid #054b6e; background: #f8f8f8;">
+<div class="java5" style="border-collapse: collapse; width: 100%;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;">move<span style="color: #009900;">(</span><span style="color: #cc66cc;">5</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span></pre>
+</div>
+</div>
+</div>
+<p> <br>The value 5 is the actual parameter to <span class="snippet" style="font-weight: bold;">move()</span>, in contrast to the formal parameter, which appears in <span class="snippet" style="font-weight: bold;">move()</span>'s signature.</p>
+<p>See also parameter.</p>
+⏣
+null
