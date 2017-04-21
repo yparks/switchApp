@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a7105d972ebf81bb2da0c644bf6aa98abb6c91ec">
+        sha1="96dedd9b77ebfebdbd3bb608f3b0f7625b2a9250">
         <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0451cce1ff9a59fbf73a008b0f713a6e6f79078d/classes.dex" />
     </item>
     <item
@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="6263e5a48848fb069f3e22f5f21e529f7019d127">
+        sha1="3661f916e217806d98602859042649f38015ad7e">
         <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f538f734e5baefdb85ffdb6fac9336d66b4fa2de/classes.dex" />
     </item>
     <item
