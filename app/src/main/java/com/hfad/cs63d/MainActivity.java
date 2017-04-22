@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textHome;
-//    private TextView textHistory;
+    private TextView textHistory;
     private TextView textFavorites;
     private TextView textAZ;
     @Override
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textHome = (TextView) findViewById(R.id.text_home);
-//        textHistory = (TextView) findViewById(R.id.text_history);
+        textHistory = (TextView) findViewById(R.id.text_history);
         textFavorites = (TextView) findViewById(R.id.text_favorites);
         textAZ = (TextView) findViewById(R.id.text_az);
 
@@ -43,21 +43,21 @@ public class MainActivity extends AppCompatActivity {
                                 textFavorites.setVisibility(View.GONE);
                                 textAZ.setVisibility(View.GONE);
                                 break;
-//                            case R.id.action_history:
-//                                textHome.setVisibility(View.GONE);
-//                                textHistory.setVisibility(View.VISIBLE);
-//                                textFavorites.setVisibility(View.GONE);
-//                                textAZ.setVisibility(View.GONE);
-//                                break;
+                            case R.id.action_history:
+                                textHome.setVisibility(View.GONE);
+                                textHistory.setVisibility(View.VISIBLE);
+                                textFavorites.setVisibility(View.GONE);
+                                textAZ.setVisibility(View.GONE);
+                                break;
                             case R.id.action_favorites:
                                 textHome.setVisibility(View.GONE);
-//                                textHistory.setVisibility(View.GONE);
+                                textHistory.setVisibility(View.GONE);
                                 textFavorites.setVisibility(View.VISIBLE);
                                 textAZ.setVisibility(View.GONE);
                                 break;
                             case R.id.action_az:
                                 textHome.setVisibility(View.GONE);
-//                                textHistory.setVisibility(View.GONE);
+                                textHistory.setVisibility(View.GONE);
                                 textFavorites.setVisibility(View.GONE);
                                 textAZ.setVisibility(View.VISIBLE);
                                 break;
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
-//silly comment
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the options menu from XML
@@ -83,4 +83,4 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-}//Test
+}
