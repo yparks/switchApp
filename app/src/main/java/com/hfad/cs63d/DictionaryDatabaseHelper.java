@@ -38,7 +38,6 @@ public class DictionaryDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         sqlDatabase = db;
-        loadDictionary();
         updateMyDatabase(db, 0, DB_VERSION);
     }
 
@@ -54,19 +53,23 @@ public class DictionaryDatabaseHelper extends SQLiteOpenHelper {
                     TERM_COL + " TEXT, " +
                     DEFINITION_COL + " TEXT, " +
                     CATEGORY_COL + " TEXT, " +
-                    FAVORITES_COL + " INTEGER, " +
+                    FAVORITES_COL + " NUMERIC, " +
                     NOTES_COL + " TEXT);");
+            Log.v(TAG, "in DictionaryDatabaseHelper updateMyDatabase()");
+            loadDictionary();
+//            insertTerm(db, "static", "blah blah blah");
         }
     }
 
     private void loadDictionary() {
+        Log.v(TAG, "in DictionaryDatabaseHelper loadDictionary()");
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     loadTerms();
                 } catch (IOException e) {
-                    Log.d("", "DictionaryDatabaseHelper threw exception");
+                    Log.d("ATTN", "DictionaryDatabaseHelper threw exception");
                     throw new RuntimeException(e);
                 }
             }
@@ -74,19 +77,16 @@ public class DictionaryDatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void loadTerms() throws IOException {
-        Log.d("", "Loading words...");
+        Log.d(TAG, "in DictionaryDatabaseHelper loadTerms()");
+        Log.d(TAG, "Loading words...");
         final Resources resources = mHelperContex.getResources();
-        InputStream inputStream = resources.openRawResource(R.raw.csdictionary_copy);
+        InputStream inputStream = resources.openRawResource(R.raw.cs63dict_singleline_def);
         BufferedReader buffReader = new BufferedReader(new InputStreamReader(inputStream));
         try {
             String line;
             while ((line = buffReader.readLine()) != null) {
                 String[] strings = TextUtils.split(line, "⏣");
-                //attempting to log what this looks like
-                for (int i = 0; i < strings.length; i++){
-                    Log.v(TAG, strings[i]);
-                }
-                if (strings.length < 2) continue;
+                if (strings.length < 3) continue;
                 long id = addTerm(strings[0].trim(), strings[1].trim(), strings[2].trim());
                 if (id < 0) {
                     Log.d(TAG, ":UNABLE TO ADD WORD: " + strings[0].trim());
@@ -102,6 +102,14 @@ public class DictionaryDatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(TERM_COL, term);
         contentValues.put(DEFINITION_COL, definition);
         contentValues.put(CATEGORY_COL, category);
+        Log.d("VALUES: ", "Row populated: " + contentValues);
         return sqlDatabase.insert(DICTIONARY_TABLE, null, contentValues);
     }
+//
+//    private static void insertTerm(SQLiteDatabase db, String term, String definition) {
+//        ContentValues dictionaryValues = new ContentValues();
+//        dictionaryValues.put(TERM_COL, term);
+//        dictionaryValues.put(DEFINITION_COL, definition);
+//        db.insert(DICTIONARY_TABLE, null, dictionaryValues);
+//    }
 }
