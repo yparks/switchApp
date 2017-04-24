@@ -1,13 +1,13 @@
 package com.hfad.cs63d;
 
-import android.app.Activity;
 import android.app.SearchManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -81,6 +81,14 @@ public class MainActivity extends AppCompatActivity {
         searchView.setSearchableInfo(searchManager.getSearchableInfo(cn));
 
         return true;
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+//            doSearch(query);
+        }
     }
 
 }
