@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textHome;
-    private TextView textHistory;
+        private TextView textHistory;
     private TextView textFavorites;
     private TextView textAZ;
     @Override
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                         switch (item.getItemId()) {
                             case R.id.action_home:
                                 textHome.setVisibility(View.VISIBLE);
-//                                textHistory.setVisibility(View.GONE);
+                                textHistory.setVisibility(View.GONE);
                                 textFavorites.setVisibility(View.GONE);
                                 textAZ.setVisibility(View.GONE);
                                 break;
@@ -66,18 +66,18 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
-
+    //silly comment
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the options menu from XML
         // MenuInflater inflater = getMenuInflater();
         // inflater.inflate(R.menu.options_menu, menu);
-        getMenuInflater().inflate(R.menu.activity_main, menu);
+        getMenuInflater().inflate(R.menu.search_menu, menu);
 
         // Get the SearchView and set the searchable configuration
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
-        ComponentName cn = new ComponentName(this, SearchableActivity.class);
+        ComponentName cn = new ComponentName(this, ResultActivity.class);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(cn));
 
         return true;
@@ -91,4 +91,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-}
+}//Test
