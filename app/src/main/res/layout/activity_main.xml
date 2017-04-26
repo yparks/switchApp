@@ -11,7 +11,6 @@
         android:layout_height="452dp"
         android:layout_row="4"
         android:layout_column="0">
-
     </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView

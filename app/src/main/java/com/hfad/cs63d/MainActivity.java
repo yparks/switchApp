@@ -5,23 +5,18 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.support.v7.app.AppCompatActivity;
-import android.support.design.widget.BottomNavigationView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
     private ListFragment listFragment;
-    private Fragment fragment;
     private FragmentManager fragmentManager;
 
     @Override
@@ -39,20 +34,19 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.action_home:
-
+                                //add your fragment here
                                 break;
                             case R.id.action_history:
-
+                                //add your fragment here
                                 break;
                             case R.id.action_favorites:
-
+                                //add your fragment here
                                 break;
                             case R.id.action_az:
                                 Log.d("MainActivity", "onNavigationItemSelected()" + item);
                                 listFragment = new AZListFragment();
                                 break;
                         }
-
                         final FragmentTransaction transaction = fragmentManager.beginTransaction();
                         transaction.replace(R.id.content_frame, listFragment).commit();
                         return true;
@@ -63,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the options menu from XML
-        // MenuInflater inflater = getMenuInflater();
-        // inflater.inflate(R.menu.options_menu, menu);
         getMenuInflater().inflate(R.menu.search_menu, menu);
 
         // Get the SearchView and set the searchable configuration
@@ -75,5 +67,4 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
-
 }

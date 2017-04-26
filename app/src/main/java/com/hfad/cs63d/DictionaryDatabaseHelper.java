@@ -13,10 +13,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 
-public class DictionaryDatabaseHelper extends SQLiteOpenHelper {
+class DictionaryDatabaseHelper extends SQLiteOpenHelper {
     private final String TAG = getClass().toString();
     private Context mHelperContex;
     private SQLiteDatabase sqlDatabase;
+    int count = 0;
 
     private static final String DB_NAME = "csdictionary";
     private static final int DB_VERSION = 1;
@@ -55,13 +56,13 @@ public class DictionaryDatabaseHelper extends SQLiteOpenHelper {
                     CATEGORY_COL + " TEXT, " +
                     FAVORITES_COL + " NUMERIC, " +
                     NOTES_COL + " TEXT);");
-            Log.v(TAG, "in DictionaryDatabaseHelper updateMyDatabase()");
+            Log.v(TAG, "in updateMyDatabase()");
             loadTerms();
         }
     }
 
     private void loadTerms() {
-        Log.d(TAG, "in DictionaryDatabaseHelper loadTerms()");
+        Log.d(TAG, "in loadTerms()");
         Log.d(TAG, "Loading words...");
         Resources resources = mHelperContex.getResources();
         InputStream inputStream = resources.openRawResource(R.raw.cs63dict_singleline_def);
@@ -72,8 +73,9 @@ public class DictionaryDatabaseHelper extends SQLiteOpenHelper {
                 String[] strings = TextUtils.split(line, "⏣");
                 if (strings.length < 3) continue;
                 long id = addTerm(strings[0].trim(), strings[1].trim(), strings[2].trim());
+                count++;
                 if (id < 0) {
-                    Log.d(TAG, "UNABLE TO ADD WORD: " + strings[0].trim());
+                    Log.d(TAG, "Unable to add word: " + strings[0].trim());
                 }
             }
             buffReader.close();
@@ -87,7 +89,7 @@ public class DictionaryDatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(TERM_COL, term);
         contentValues.put(DEFINITION_COL, definition);
         contentValues.put(CATEGORY_COL, category);
-        Log.d(TAG, "Row populated: " + contentValues);
+        Log.d(TAG, "Row #" + count + " populated: " + contentValues);
         return sqlDatabase.insert(DICTIONARY_TABLE, null, contentValues);
     }
 }
