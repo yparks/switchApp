@@ -10,4 +10,9 @@
     <style name="ActionBarTheme" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
         <item name="background">@color/colorPrimary</item>
     </style>
+
+    <color name="winBackground">#FFFFEC</color>
+    <color name="background">#F08080</color>
+
 </resources>
+
