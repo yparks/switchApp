@@ -8,13 +8,10 @@
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-        <ListView
-            android:id="@+id/list"
-            android:layout_width="fill_parent"
-            android:layout_height="222dip">
-        </ListView>
+        android:layout_height="452dp"
+        android:layout_row="4"
+        android:layout_column="0">
+    </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"
