@@ -56,5 +56,5 @@
         app:itemIconTint="@color/textColorPrimary"
         app:itemTextColor="@color/textColorPrimary"
         app:menu="@menu/bottom_navigation" />
-    
+
 </GridLayout>

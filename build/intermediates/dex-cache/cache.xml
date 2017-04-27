@@ -3,183 +3,183 @@
 
     <item
         is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_b7c064a7dd99cefaf9231ce69c7cf0e5815e6fba/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="128ea3f747a55ca6665e2c28775f08b948606c3f">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0451cce1ff9a59fbf73a008b0f713a6e6f79078d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.0_2c4a0e53068ae1a29b2b8074c587cb157cdc7cb7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.0_26a94450c3f875eb8f1239aa829ec4662d76ea1b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.0_0d999e263c267a683e02bff13e8a573ae92487de/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.0_2c39254693452bf76e3aee11e18b81e0222210e7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c96c5a60b05598acb5918379553e919c91793042">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f538f734e5baefdb85ffdb6fac9336d66b4fa2de/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.0_3b7fd061498f95dfc7f0764c7ec535d1e298d765/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.0.0_922c913b18852046ca4d0c1e8ddc0796f25b913e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_39faa3accdad22bd46ba67a438875899677ac4e6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.0_ee0cb2cff5c885dfc3db339e99ca605b79a1d1b6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.0_3af5f95a5fc37a218f96c54f2d2e9313d68b2ed3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.0_712ea4dc3e54a797430ac937a688b22b883a0388/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_32171c16de515776c274537b792571b22c1ddf2a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_70c6f43ad4e16a60cd6a70dc82c4c41fdee54ab2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/design/25.0.0/jars/classes.jar"
+        jar="/Users/admin/.android/build-cache/3d5868734c8a0a60c0ed919e2c01bfc2db90d80b/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.0.0_056568e58b570a0e54a75b4a62adda56dec0b7b9/classes.dex" />
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c6016576a84d8003d21269cf07e05e064e7369b9/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
+        jar="/Users/admin/.android/build-cache/fa9ce0d3b25b7a65454dc9439ada5cad579fd3ea/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.0_083a0438dd5e928717109ecf5eadfc82e170a8bd/classes.dex" />
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_63a72e384bb73c703832ed054aed818a762020ed/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
+        jar="/Users/admin/.android/build-cache/89bb09ec64c07ecaa3994d9dfea7a5b67dc093cc/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.0_d09ddd55a16170dd2732980b503df660daa162ce/classes.dex" />
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_153af18d367ebf1fce3124a9beaef080567384ea/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.0/jars/classes.jar"
+        jar="/Users/admin/.android/build-cache/35a14e8b12d318166ca58073fa1d7149af5e962c/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.0.0_d03e6950ab3a11436a8384f153a0f9ca9195d9ae/classes.dex" />
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6abb4cd89771ac565a0d7e4ce88c90d4a9fc61da/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jar="/Users/admin/.android/build-cache/33ec17bb99a9159d34eb591ab3efca7f1e147bd9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e8920e19896a373b5118f7e3830f70bf63339bee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/.android/build-cache/82c39cd946b26fe5cc723c4e3b855da0afb52087/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9530e601ba8458325998e70a249a3196de7858bb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/.android/build-cache/82c39cd946b26fe5cc723c4e3b855da0afb52087/output/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_5a9aae3103324cf7462c7ba659f7604aab9b51f9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/.android/build-cache/1f5b6c203f70f84c93485cf2049e7f9e64440632/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bf90ca4a00d8e5384be1a93dca815a19016bb5e6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.0_06a8542ae4e7569e8282e5238427b79365343fa3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/.android/build-cache/33ec17bb99a9159d34eb591ab3efca7f1e147bd9/output/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_ef2f79f8443d081ab4928072a3f9627854d30a43/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/.android/build-cache/6c4ce32e3eb395a305bf669a8b8dd36a0dafaebd/output/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
-        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_fe2145c4b7cdf0fbba9599084b2095c56e01a9d2/classes.dex" />
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_b578e5503bf47e01ad9829ffd528d0eea01e103f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3c2b6caf2582d35d3ced3394137dd3465afe3d46/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/.android/build-cache/fa9ce0d3b25b7a65454dc9439ada5cad579fd3ea/output/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_c207eb5a4937a9e14fb8be1ac09daaf4de39efed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/.android/build-cache/5b05683e729d37ee82ebb04b136ced0e09ac9090/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_80adad385a99155e8b7cf1444b6ef35363bbd66b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/.android/build-cache/6c4ce32e3eb395a305bf669a8b8dd36a0dafaebd/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_353e66c22a886e4bdb262c8b3766319ea89a3bb2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e6edfee12f4b8ce812c29d09dcaef84db1f52bba">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ae50ccaba48b6b6c064d4aecec52e2df5d0e3d39/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/.android/build-cache/dcb562132c6a8de26b05fea46455065d4c23b925/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b81d6023461589176cf95f9b2703b3ce52cada3e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/.android/build-cache/89bb09ec64c07ecaa3994d9dfea7a5b67dc093cc/output/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_f13906d95c15f4ed3f4e5d2a5aea020f6f302acc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/.android/build-cache/865a268611f819f9bee43bbdca45d44203e8b9a3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_402f1d56426f77d5fd85d96222f3c6e8524adb73/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/admin/.android/build-cache/5b90934d40bb361beb795163708482d3363837cf/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/admin/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0af97a9688749dd7c466d281a9c2b2e990a87610/classes.dex" />
     </item>
 
 </items>
