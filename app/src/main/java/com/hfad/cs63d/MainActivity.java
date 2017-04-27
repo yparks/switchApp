@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case R.id.action_az:
                                 Log.d("MainActivity", "onNavigationItemSelected()" + item);
-                                listFragment = new AZListFragment();
+                                listFragment = new AZCategoryList();
                                 break;
                         }
                         final FragmentTransaction transaction = fragmentManager.beginTransaction();

@@ -13,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ResultActivity extends Activity {
+
+
     private static final String TAG = "ResultActivity";
 
     @Override
@@ -32,7 +34,8 @@ public class ResultActivity extends Activity {
         try{
             SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(this);
             SQLiteDatabase db = dictionaryDatabaseHelper.getReadableDatabase();
-            Cursor cursor = db.query(DictionaryDatabaseHelper.DICTIONARY_TABLE,
+            Cursor cursor = db.query(
+                    DictionaryDatabaseHelper.DICTIONARY_TABLE,
                     new String[] {DictionaryDatabaseHelper.TERM_COL, DictionaryDatabaseHelper.DEFINITION_COL},
                     DictionaryDatabaseHelper.TERM_COL + " = ?",
                     new String[] {query},
