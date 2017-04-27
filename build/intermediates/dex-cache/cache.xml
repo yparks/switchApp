@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ece653eb2f8a922275f1968a2b9927096d093d99">
+        sha1="9db13beffa3944a0c8a459eb744c4693a32fd4d8">
         <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_102f788fc617820859e08505a36bf56088b45c00/classes.dex" />
     </item>
     <item
@@ -124,7 +124,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="717e4e76ba8f76ef35edbd3d6dcc068b031a786e">
+        sha1="3f24959f1685770b51e3b4f63c3e7ccac95cedd8">
         <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_553ba55df1fea8aa5648108c40b7e62ddb09b244/classes.dex" />
     </item>
     <item

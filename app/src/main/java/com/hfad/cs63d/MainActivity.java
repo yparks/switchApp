@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                         final FragmentTransaction transaction = fragmentManager.beginTransaction();
                         transaction.replace(R.id.content_frame, listFragment).commit();
+                        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                        transaction.addToBackStack(null);
                         return true;
                     }
                 });

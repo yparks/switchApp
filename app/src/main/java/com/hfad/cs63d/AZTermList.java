@@ -46,7 +46,7 @@ public class AZTermList extends ListFragment{
                     int row = cursor.getInt(0);
                     String result = cursor.getString(1);
                     Log.d(TAG, "Term " + result);
-                    Log.d(TAG, "Term row" + row);
+                    Log.d(TAG, "Term row: " + row);
                     cursor.moveToNext();
                 }
             }

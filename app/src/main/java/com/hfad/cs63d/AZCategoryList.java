@@ -70,10 +70,12 @@ public class AZCategoryList extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l,v,position,id);
-        Log.d(TAG, "onListItemClick() long id= " + id);
+        Log.d(TAG, "onListItemClick() long id = " + id);
         listFragment = new AZTermList();
         listFragment.setCategory(id);
         FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        transaction.addToBackStack(null);
         transaction.replace(R.id.content_frame, listFragment).commit();
     }
 }
