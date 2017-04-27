@@ -2,8 +2,6 @@
     <color name="colorPrimary">#004764</color> 
     <color name="statusBarColor">#00354b</color> 
 
-     
-    <color name="windowBackground">#FFFFEC</color> 
+    <color name="windowBackground">#FFFFFD</color> 
     <color name="textColorPrimary">#FFFFFF</color> 
-    <color name="colorPrimaryDark">#962938</color>
 </resources>

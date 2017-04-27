@@ -5,29 +5,25 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.ListFragment;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.SearchView;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView textHome;
-        private TextView textHistory;
-    private TextView textFavorites;
-    private TextView textAZ;
+    private ListFragment listFragment;
+    private FragmentManager fragmentManager;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textHome = (TextView) findViewById(R.id.text_home);
-        textHistory = (TextView) findViewById(R.id.text_history);
-        textFavorites = (TextView) findViewById(R.id.text_favorites);
-        textAZ = (TextView) findViewById(R.id.text_az);
-
+        fragmentManager = getSupportFragmentManager();
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.bottom_navigation);
@@ -38,40 +34,31 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.action_home:
-                                textHome.setVisibility(View.VISIBLE);
-                                textHistory.setVisibility(View.GONE);
-                                textFavorites.setVisibility(View.GONE);
-                                textAZ.setVisibility(View.GONE);
+                                //add your fragment here
                                 break;
                             case R.id.action_history:
-                                textHome.setVisibility(View.GONE);
-                                textHistory.setVisibility(View.VISIBLE);
-                                textFavorites.setVisibility(View.GONE);
-                                textAZ.setVisibility(View.GONE);
+                                //add your fragment here
                                 break;
                             case R.id.action_favorites:
-                                textHome.setVisibility(View.GONE);
-                                textHistory.setVisibility(View.GONE);
-                                textFavorites.setVisibility(View.VISIBLE);
-                                textAZ.setVisibility(View.GONE);
+                                //add your fragment here
                                 break;
                             case R.id.action_az:
-                                textHome.setVisibility(View.GONE);
-                                textHistory.setVisibility(View.GONE);
-                                textFavorites.setVisibility(View.GONE);
-                                textAZ.setVisibility(View.VISIBLE);
+                                Log.d("MainActivity", "onNavigationItemSelected()" + item);
+                                listFragment = new AZCategoryList();
                                 break;
                         }
-                        return false;
+                        final FragmentTransaction transaction = fragmentManager.beginTransaction();
+                        transaction.replace(R.id.content_frame, listFragment).commit();
+                        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                        transaction.addToBackStack(null);
+                        return true;
                     }
                 });
     }
-    //silly comment
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the options menu from XML
-        // MenuInflater inflater = getMenuInflater();
-        // inflater.inflate(R.menu.options_menu, menu);
         getMenuInflater().inflate(R.menu.search_menu, menu);
 
         // Get the SearchView and set the searchable configuration
@@ -82,5 +69,4 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
-
-}//Test
+}

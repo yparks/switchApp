@@ -2,7 +2,6 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <item name="actionBarStyle">@style/ActionBarTheme</item>
         <item name="android:colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:windowBackground">@color/windowBackground</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:statusBarColor">@color/statusBarColor</item>
@@ -10,9 +9,5 @@
     <style name="ActionBarTheme" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
         <item name="background">@color/colorPrimary</item>
     </style>
-
-    <color name="winBackground">#FFFFEC</color>
-    <color name="background">#F08080</color>
-
 </resources>
 
