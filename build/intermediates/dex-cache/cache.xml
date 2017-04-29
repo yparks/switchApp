@@ -3,138 +3,138 @@
 
     <item
         is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="9db13beffa3944a0c8a459eb744c4693a32fd4d8">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_102f788fc617820859e08505a36bf56088b45c00/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/jars/classes.jar"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.3.1_52bcc9f820e089324c784522923c5e3dfe728569/classes.dex" />
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.3.1_082529359cd40c5dd4701d90d033f5a258f7f6cc/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.3.1_ca0c0d9ded13426f098ecfd811e7cd1d9ede1e2a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.3.1_88fcfe1d7846cd36f1beff645559225f45f724d3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.3.1_4b2a7668c3b7619f82f64da3117eb3ebd9e10420/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/barango/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_1a67d4963962f5e92217103ffbff88f14e28a86f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.3.1_4e77585dbd2181a2aafbb993d54670303f78f341/classes.dex" />
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.3.1_56b1d606e502b902f7e391333adc883741c356b8/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/exploded-aar/com.android.support/transition/25.3.1/jars/classes.jar"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/transition/25.3.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.3.1_9c14509604e252cfce94fc76c87cf49695ff5881/classes.dex" />
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.3.1_3d10686206ca2b28e053c741c511683ca153bb0c/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.3.1_be2d2ddbfdb8beb963b41039a18bc0ecd373200e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.3.1_d9b83ac02a42eafbeb2022d7c6a20407b77c5544/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/jars/classes.jar"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.3.1_2742cf65b5ff21a4edaa3927df13e12d136d9682/classes.dex" />
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.3.1_f0129f2c07a0693d1b65dff9bc6ead22dfff1b79/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.3.1_25ef400ad416b739347e44d55398075ac844e143/classes.dex" />
+        sha1="398f771db0a927a93bd4dcf9ed3012bb1448ff25">
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0451cce1ff9a59fbf73a008b0f713a6e6f79078d/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.1/jars/classes.jar"
+        jar="/Users/Robertsquared/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_0ff7c3f4880a9ef5465df0445459bf2706a0111c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.3.1_76c1420763f5b5064c5e5b4410fd7f0c5f0b6235/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.3.1_812b016f2822b6e404ce9e8239d8ebdcd2a9a07f/classes.dex" />
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.3.1_9efb5e6b2dbb7a1ccc9a9cd4b45460fcc9c90449/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="3f24959f1685770b51e3b4f63c3e7ccac95cedd8">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_553ba55df1fea8aa5648108c40b7e62ddb09b244/classes.dex" />
+        sha1="8fa7911d3d191a75a9aba738ffa986fd01a570c3">
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f538f734e5baefdb85ffdb6fac9336d66b4fa2de/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars/classes.jar"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="/Users/barango/Documents/AndroidStudioProjects/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.3.1_f23b18adc73caa8e8c59d285ee5600c4b28d9ebc/classes.dex" />
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.3.1_910835d4ecf890bb779759cce083037ff339cfd7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.3.1_831f8b0fac456bf0b03b0e5b20cade6ef1dcb2c5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.3.1_77c621251873c40ce387a61ddfa7db6fdf4c956c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.3.1_5ed06bfbc6b7bd440a75ce6974b38569c87d245b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.3.1_68626e1cdcf141d15f7256e848d9f631456a0953/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/Robertsquared/Desktop/literate-train/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.3.1_6993f3259d9f51b34ed07d8020ae0f9b1cc5aa81/classes.dex" />
     </item>
 
 </items>

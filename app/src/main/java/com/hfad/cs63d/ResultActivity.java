@@ -2,6 +2,7 @@ package com.hfad.cs63d;
 
 import android.app.Activity;
 import android.app.SearchManager;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -16,6 +17,7 @@ public class ResultActivity extends Activity {
 
 
     private static final String TAG = "ResultActivity";
+    int count = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,11 @@ public class ResultActivity extends Activity {
                 //Definition
                 TextView definitionView = (TextView) findViewById(R.id.definition);
                 definitionView.setText(definition);
+
+//                //Add term and definition to database
+//                addTerm(term, definition);
+//                Log.v(TAG, "added term");
+
             }else {
                 Toast toast = Toast.makeText(this, "Term not found", Toast.LENGTH_SHORT);
                 toast.show();
@@ -62,5 +69,18 @@ public class ResultActivity extends Activity {
             Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT);
             toast.show();
         }
+    }
+//
+    public long addTerm(String term, String definition) {
+
+        SQLiteOpenHelper historyDatabaseHelper = new HistoryDatabaseHelper(this);
+        SQLiteDatabase db = historyDatabaseHelper.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(HistoryDatabaseHelper.TERM_COL, term);
+        contentValues.put(HistoryDatabaseHelper.DEFINITION_COL, definition);
+        Log.d(TAG, "Row #" + count + " populated: " + contentValues);
+
+        return db.insert(HistoryDatabaseHelper.DICTIONARY_TABLE, null, contentValues);
     }
 }
