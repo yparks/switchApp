@@ -13,11 +13,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
     private ListFragment listFragment;
     private FragmentManager fragmentManager;
+    ImageView image;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                         switch (item.getItemId()) {
                             case R.id.action_home:
                                 //add your fragment here
+
                                 break;
                             case R.id.action_history:
                                 //Set list fragment as instance of history class

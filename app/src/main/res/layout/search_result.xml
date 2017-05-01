@@ -13,7 +13,7 @@
         android:layout_row="0"
         android:layout_rowSpan="2"/>
 
-    <TextView
+    <WebView
         android:id="@+id/definition"
         android:textSize="18dp"
         android:layout_width="wrap_content"

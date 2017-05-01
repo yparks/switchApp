@@ -8,10 +8,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.Html;
 import android.util.Log;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +21,8 @@ public class ResultActivity extends Activity {
     public static final String TERM_ON_CLICK = "";
 
     private static final String TAG = "ResultActivity";
+
+    private WebView mWebView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,8 @@ public class ResultActivity extends Activity {
             Log.d(TAG, "onCreate(): intent.getStringExtra(TERM_ON_CLICK) = " + term);
             doTermSearch(term);
         }
+
+
     }
 
     public void doTermSearch(String query) {
@@ -68,17 +72,19 @@ public class ResultActivity extends Activity {
                 termView.setText(term);
 
                 //Definition
-                TextView definitionView = (TextView) findViewById(R.id.definition);
-//                definitionView.setText(Html.fromHtml(definition));
+                mWebView = (WebView) findViewById(R.id.definition);
+                WebSettings webSettings = mWebView.getSettings();
+                webSettings.setJavaScriptEnabled(true);
+                mWebView.loadData(definition, "text/html", null);
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) { // for 24 api and more
-                    definitionView.setText(Html.fromHtml(definition, Html.FROM_HTML_MODE_LEGACY)); }
-                else {
-                    //for older api
-                    definitionView.setText(Html.fromHtml(definition));
-//                    definitionView.setText(new HtmlSpanner().fromHtml(definition));
-
-                }
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) { // for 24 api and more
+//                    definitionView.setText(Html.fromHtml(definition, Html.FROM_HTML_MODE_LEGACY)); }
+//                else {
+//                    //for older api
+//                    definitionView.setText(Html.fromHtml(definition));
+////                    definitionView.setText(new HtmlSpanner().fromHtml(definition));
+//
+//                }
 
                 //Add term and definition to database
                 addTerm(term, definition);
