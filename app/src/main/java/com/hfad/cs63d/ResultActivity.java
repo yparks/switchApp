@@ -85,7 +85,7 @@ public class ResultActivity extends Activity {
                 //Definition
                 mWebView = (WebView) findViewById(R.id.definition);
                 WebSettings webSettings = mWebView.getSettings();
-                webSettings.setJavaScriptEnabled(true);
+
                 mWebView.loadData(definition, "text/html", null);
             }else {
                 Toast toast = Toast.makeText(this, "Term not found", Toast.LENGTH_SHORT);
