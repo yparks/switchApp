@@ -7,9 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.Html;
 import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -78,7 +76,7 @@ public class ResultActivity extends Activity {
 ////                    definitionView.setText(new HtmlSpanner().fromHtml(definition));
 //
 //                }
-/
+///
                 //Term
                 TextView termView = (TextView) findViewById(R.id.term);
                 termView.setText(term);
