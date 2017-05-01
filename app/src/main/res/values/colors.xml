@@ -1,7 +1,10 @@
 <resources>
-    <color name="colorPrimary">#004764</color> 
-    <color name="statusBarColor">#00354b</color> 
+    <color name="colorPrimary">#2B9CBE</color> 268ba9
+    <color name="statusBarColor">#268ba9</color> 
 
     <color name="windowBackground">#FFFFFD</color> 
     <color name="textColorPrimary">#FFFFFF</color> 
+    <color name="azcategorylist">#f2dbd4</color>
+    <color name="aztermlist">#f8ede9
+    </color>
 </resources>

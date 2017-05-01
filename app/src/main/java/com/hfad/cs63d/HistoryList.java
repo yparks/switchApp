@@ -1,5 +1,6 @@
 package com.hfad.cs63d;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
@@ -19,6 +20,7 @@ public class HistoryList extends ListFragment{
     private SQLiteDatabase db;
     private Cursor cursor;
     private String term;
+    private static final String LIST_LIMIT = "50";
 
 
 
@@ -31,19 +33,23 @@ public class HistoryList extends ListFragment{
             SQLiteOpenHelper historyDatabaseHelper = new HistoryDatabaseHelper(this.getContext());
             db = historyDatabaseHelper.getReadableDatabase();
             cursor = db.query(
-                    HistoryDatabaseHelper.DICTIONARY_TABLE,
-                    new String[]{HistoryDatabaseHelper.ID_COL,HistoryDatabaseHelper.TERM_COL},
+                    true,//select distinct values
+                    HistoryDatabaseHelper.DICTIONARY_TABLE,//table to query
+                    new String[]{HistoryDatabaseHelper.ID_COL, HistoryDatabaseHelper.TERM_COL},//columns to return
                     null,
                     null,
+                    HistoryDatabaseHelper.TERM_COL,//group by term
                     null,
-                    null,
-                    null);
+                    HistoryDatabaseHelper.ID_COL + " DESC",//specify descending sort order
+                    LIST_LIMIT);//set a limit of 50 terms
+
             Log.d(TAG, "onCreate(): cursor: " + cursor.getCount());
 
             if (cursor.moveToFirst()) {
                 while (!cursor.isAfterLast()) {
                     int row = cursor.getInt(0);
                     String result = cursor.getString(1);
+//                    String definition = cursor.getString(2);
                     Log.d(TAG, "Term " + result);
                     Log.d(TAG, "Term row: " + row);
                     cursor.moveToNext();
@@ -88,7 +94,16 @@ public class HistoryList extends ListFragment{
             term = cursor.getString(0);
             Log.v(TAG, "id to term: " + term);
         }
-        resultActivity.doTermSearch(term);
+//        resultActivity.doTermSearch(term);
+//        FragmentTransaction transaction = fragmentManager.beginTransaction();
+//        transaction.replace(R.id.content_frame, resultActivity).commit();
+
+        Intent intent = new Intent(getActivity(), ResultActivity.class);
+        intent.putExtra(ResultActivity.TERM_ON_CLICK, term);
+        getActivity().startActivity(intent);
+//        resultActivity.doTermSearch(term);
+//        FragmentTransaction transaction = fragmentManager.beginTransaction();
+//        transaction.replace(R.id.content_frame, resultActivity).commit();
 //        FragmentTransaction transaction = fragmentManager.beginTransaction();
 //        transaction.replace(R.id.content_frame, resultActivity).commit();
     }

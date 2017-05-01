@@ -1,5 +1,6 @@
 package com.hfad.cs63d;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
@@ -67,7 +68,7 @@ public class AZTermList extends ListFragment{
 
     }
 
-    private ResultActivity resultActivity;
+//    private ResultActivity resultActivity;
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
@@ -76,7 +77,7 @@ public class AZTermList extends ListFragment{
 
         Toast toast = Toast.makeText(this.getContext(), "testing", Toast.LENGTH_LONG);
         toast.show();
-        resultActivity = new ResultActivity();
+//        resultActivity = new ResultActivity();
         cursor = db.query(
                 DictionaryDatabaseHelper.DICTIONARY_TABLE,
                 new String[]{DictionaryDatabaseHelper.TERM_COL},
@@ -85,11 +86,17 @@ public class AZTermList extends ListFragment{
                 null,
                 null,
                 null);
+
         if (cursor.moveToFirst()) {
             term = cursor.getString(0);
             Log.v(TAG, "id to term: " + term);
         }
-        resultActivity.doTermSearch(term);
+        Intent intent = new Intent(getActivity(), ResultActivity.class);
+        intent.putExtra(ResultActivity.TERM_ON_CLICK, term);
+        getActivity().startActivity(intent);
+//        resultActivity.doTermSearch(term);
+//        FragmentTransaction transaction = fragmentManager.beginTransaction();
+//        transaction.replace(R.id.content_frame, resultActivity).commit();
 //        FragmentTransaction transaction = fragmentManager.beginTransaction();
 //        transaction.replace(R.id.content_frame, resultActivity).commit();
     }

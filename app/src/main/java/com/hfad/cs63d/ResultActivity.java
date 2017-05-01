@@ -15,9 +15,10 @@ import android.widget.Toast;
 
 public class ResultActivity extends Activity {
 
+    public int count = 0;
+    public static final String TERM_ON_CLICK = "";
 
     private static final String TAG = "ResultActivity";
-    int count = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,10 @@ public class ResultActivity extends Activity {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
             doTermSearch(query);
+        } else {
+            String term = intent.getStringExtra(TERM_ON_CLICK);
+            Log.d(TAG, "onCreate(): intent.getStringExtra(TERM_ON_CLICK) = " + term);
+            doTermSearch(term);
         }
     }
 
@@ -38,7 +43,7 @@ public class ResultActivity extends Activity {
             SQLiteDatabase db = dictionaryDatabaseHelper.getReadableDatabase();
             Cursor cursor = db.query(
                     DictionaryDatabaseHelper.DICTIONARY_TABLE,
-                    new String[] {DictionaryDatabaseHelper.TERM_COL, DictionaryDatabaseHelper.DEFINITION_COL},
+                    new String[] {DictionaryDatabaseHelper.TERM_COL, DictionaryDatabaseHelper.DEFINITION_COL, DictionaryDatabaseHelper.DEFINITION_COL},
                     DictionaryDatabaseHelper.TERM_COL + " = ?",
                     new String[] {query},
                     null,
@@ -56,9 +61,9 @@ public class ResultActivity extends Activity {
                 TextView definitionView = (TextView) findViewById(R.id.definition);
                 definitionView.setText(definition);
 
-//                //Add term and definition to database
-//                addTerm(term, definition);
-//                Log.v(TAG, "added term");
+                //Add term and definition to database
+                addTerm(term, definition);
+                Log.v(TAG, "added term");
 
             }else {
                 Toast toast = Toast.makeText(this, "Term not found", Toast.LENGTH_SHORT);
