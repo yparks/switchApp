@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case R.id.action_history:
                                 //Set list fragment as instance of history class
-                                listFragment = new HistoryList();
+                                listFragment = new HistoryListFragment();
                                 break;
                             case R.id.action_favorites:
                                 //add your fragment here

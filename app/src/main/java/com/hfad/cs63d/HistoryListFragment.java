@@ -14,8 +14,8 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class HistoryList extends ListFragment{
-    private static final String TAG = "HistoryList";
+public class HistoryListFragment extends ListFragment{
+    private static final String TAG = "HistoryListFragment";
 
     private SQLiteDatabase db;
     private Cursor cursor;
@@ -49,7 +49,6 @@ public class HistoryList extends ListFragment{
                 while (!cursor.isAfterLast()) {
                     int row = cursor.getInt(0);
                     String result = cursor.getString(1);
-//                    String definition = cursor.getString(2);
                     Log.d(TAG, "Term " + result);
                     Log.d(TAG, "Term row: " + row);
                     cursor.moveToNext();
@@ -76,7 +75,7 @@ public class HistoryList extends ListFragment{
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        super.onListItemClick(l,v,position,id);
+        super.onListItemClick(l, v, position, id);
         Log.d(TAG, "onListItemClick() long id = " + id);
 
         Toast toast = Toast.makeText(this.getContext(), "testing", Toast.LENGTH_LONG);
