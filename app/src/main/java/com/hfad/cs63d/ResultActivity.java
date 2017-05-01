@@ -7,7 +7,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -60,6 +62,23 @@ public class ResultActivity extends Activity {
                 String term = cursor.getString(1);
                 String definition = cursor.getString(2);
 
+//                //Term
+//                TextView termView = (TextView) findViewById(R.id.term);
+//                termView.setText(term);
+//
+//                //Definition
+//                TextView definitionView = (TextView) findViewById(R.id.definition);
+////                definitionView.setText(Html.fromHtml(definition));
+//
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) { // for 24 api and more
+//                    definitionView.setText(Html.fromHtml(definition, Html.FROM_HTML_MODE_LEGACY)); }
+//                else {
+//                    //for older api
+//                    definitionView.setText(Html.fromHtml(definition));
+////                    definitionView.setText(new HtmlSpanner().fromHtml(definition));
+//
+//                }
+/
                 //Term
                 TextView termView = (TextView) findViewById(R.id.term);
                 termView.setText(term);
