@@ -71,7 +71,7 @@ public class HistoryListFragment extends ListFragment{
 
     }
 
-    private ResultActivity resultActivity;
+
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
@@ -80,7 +80,7 @@ public class HistoryListFragment extends ListFragment{
 
         Toast toast = Toast.makeText(this.getContext(), "testing", Toast.LENGTH_LONG);
         toast.show();
-        resultActivity = new ResultActivity();
+
         cursor = db.query(
                 HistoryDatabaseHelper.DICTIONARY_TABLE,
                 new String[]{HistoryDatabaseHelper.TERM_COL},

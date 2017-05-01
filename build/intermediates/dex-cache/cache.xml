@@ -3,48 +3,21 @@
 
     <item
         is-multidex="false"
-        jar="/Users/Robertsquared/.android/build-cache/eafe36959b6fbdc90ecdd9ea1db5c0f91f787d53/output/jars/classes.jar"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/classes_349ecca26f7244fb8b5c18cadaac65d6f3f5a96f.jar" />
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.3.1_5fc7e92719f940c14bf358bdc1846fec60113bd7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Robertsquared/.android/build-cache/9502fca78f5bc928e683d9a7a544d1abfbeee706/output/jars/classes.jar"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/classes_696f66edd942f7f6a3f22cc2bddd8433528dd2c0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/.android/build-cache/58dda98b00b07d1ec7cafbd206cc59a6b1ab5c1a/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/classes_9a56ec5dcf942072d4258230a155378f211dd553.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/.android/build-cache/46291e427ede264ebb7494612d7fe56141203ad7/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/classes_4a709ad08d1931f460742b112970ec39e3424ad3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/.android/build-cache/c94cac40aabf349880c46301694e39f6ade72023/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/classes_3328b7b060fcbbf63e7d8dd337a0f9fff21ae93e.jar" />
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.3.1_d6f36134a22e319a88629caa02a6447a7235f5cc.jar" />
     </item>
     <item
         is-multidex="false"
@@ -57,84 +30,102 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Robertsquared/.android/build-cache/a6cc2376ba1f9696a243f3a4c58e1c9913579118/output/jars/classes.jar"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-25.3.1_7f3c6182ce751d597b5701012f1ac3a4a32ae0b2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.3.1_4563f3b7319a77c20a38d998f9ff3e623f4f4011.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/classes_7553fbf915b068dc1716db9d1b998691b448a994.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2ca2a0bc5cfc6dacce9f9a213eec7dddab201c7a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="73eeae8825f03f0b30c560bf5a6f4eba3c167c4d">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5bb1786e8430e298805c45de55df04c3215e0698/classes.dex" />
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.3.1_ce92bcdcacab5045a273ebdb10f075648f3cd0a2.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Robertsquared/.android/build-cache/40dac52183af212002fc1656f3c534d992a02e5e/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/classes_dacbb1cae7f99861e41c818a0aa998555893f52a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/.android/build-cache/37b7d15ce49977725683cd2f862311d7093c01d2/output/jars/classes.jar"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/classes_652f77667084285359e6e4245adfebb90d41a5a2.jar" />
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.3.1_4a1c9e034fafe26d799147dc4388d9fdc2e0659b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Robertsquared/.android/build-cache/ff940acd97792cc52a0cb15ded6e9af446306888/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/classes_735faa543d693595f37914e6848fd23af9b87956.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/.android/build-cache/640c2b12dd520dcfcffd96e033352977a8797a68/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/classes_13e55b7be4b4b933ae8d27e6f82ce42bc2d7d50f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/.android/build-cache/7357a4a90b81b1982827d1193d485e5c10b9807b/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/classes_4689ac4b0acdfdd0e47e9709d11c7306a66d67c3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/.android/build-cache/98f80509fec8cb028ce95b4da1291204d0c2ba2e/output/jars/classes.jar"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/classes_ce769e82354355e1d9273fd21ad0aa4749acb98a.jar" />
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.3.1_aea7b50d05d97d25d6b4ffe8bfa151df3c96b8f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.3.1_6bc044c3d7d3386c32cb4e9d967bf3b158974e54.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.3.1_d59714c3c46eb587f05eee26a1fa80ce8519a9ac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.3.1_1fe4e87623fd304b7237718ae6209bfa993136b5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/transition/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.3.1_79d2f57b571bf00a5c455751382ec63b1374bc46.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.3.1_057d788062d04e58f3d5849cfaddac53bf59f8d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.3.1_5a571e6aa9ab1b4792c9ddc0b6197819adb0eaea.jar" />
     </item>
 
 </items>

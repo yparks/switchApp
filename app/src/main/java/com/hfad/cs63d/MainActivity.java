@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
@@ -13,13 +14,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
     private ListFragment listFragment;
+    private Fragment materialFragment;
     private FragmentManager fragmentManager;
-    ImageView image;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
                         switch (item.getItemId()) {
                             case R.id.action_home:
                                 //add your fragment here
-
                                 break;
                             case R.id.action_history:
                                 //Set list fragment as instance of history class
@@ -48,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case R.id.action_az:
                                 Log.d("MainActivity", "onNavigationItemSelected()" + item);
-                                listFragment = new AZCategoryList();
+                                materialFragment = new AZCategoryMaterialList();
                                 break;
                         }
                         final FragmentTransaction transaction = fragmentManager.beginTransaction();
-                        transaction.replace(R.id.content_frame, listFragment).commit();
+                        transaction.replace(R.id.content_frame, materialFragment).commit();
                         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                         transaction.addToBackStack(null);
                         return true;

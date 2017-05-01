@@ -1,10 +1,9 @@
 <resources>
-    <color name="colorPrimary">#2B9CBE</color> 268ba9
+    <color name="colorPrimary">#2B9CBE</color> 
     <color name="statusBarColor">#268ba9</color> 
 
     <color name="windowBackground">#FFFFFD</color> 
     <color name="textColorPrimary">#FFFFFF</color> 
-    <color name="azcategorylist">#f2dbd4</color>
-    <color name="aztermlist">#f8ede9
-    </color>
+    <color name="azcategory">#f7ec6a</color>
+    <color name="azterm">#fdfbe1</color>
 </resources>

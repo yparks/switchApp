@@ -6,8 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.support.v4.widget.CursorAdapter;
 import android.support.v4.widget.SimpleCursorAdapter;
@@ -16,19 +14,19 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class AZTermList extends ListFragment{
+public class AZTermList extends ListFragment {
     private static final String TAG = "AZTermList";
 
     private SQLiteDatabase db;
     private Cursor cursor;
-    private String category;
+    private String selection;
     private String term;
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "ENTERING TERM DISPLAY");
-        Log.d(TAG, "Keyword clicked: " + category);
+        Log.d(TAG, "Keyword clicked: " + selection);
         super.onCreate(savedInstanceState);
         try {
             SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(this.getContext());
@@ -37,7 +35,7 @@ public class AZTermList extends ListFragment{
                     DictionaryDatabaseHelper.DICTIONARY_TABLE,
                     new String[]{DictionaryDatabaseHelper.ID_COL, DictionaryDatabaseHelper.TERM_COL},
                     DictionaryDatabaseHelper.CATEGORY_COL + " = ?",
-                    new String[] {category},
+                    new String[]{selection},
                     null,
                     null,
                     null);
@@ -68,25 +66,22 @@ public class AZTermList extends ListFragment{
 
     }
 
-//    private ResultActivity resultActivity;
-
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        super.onListItemClick(l,v,position,id);
+        super.onListItemClick(l, v, position, id);
         Log.d(TAG, "onListItemClick() long id = " + id);
 
         Toast toast = Toast.makeText(this.getContext(), "testing", Toast.LENGTH_LONG);
         toast.show();
-//        resultActivity = new ResultActivity();
+
         cursor = db.query(
                 DictionaryDatabaseHelper.DICTIONARY_TABLE,
                 new String[]{DictionaryDatabaseHelper.TERM_COL},
                 DictionaryDatabaseHelper.ID_COL + " = ?",
-                new String[] {Long.toString(id)},
+                new String[]{Long.toString(id)},
                 null,
                 null,
                 null);
-
         if (cursor.moveToFirst()) {
             term = cursor.getString(0);
             Log.v(TAG, "id to term: " + term);
@@ -94,25 +89,23 @@ public class AZTermList extends ListFragment{
         Intent intent = new Intent(getActivity(), ResultActivity.class);
         intent.putExtra(ResultActivity.TERM_ON_CLICK, term);
         getActivity().startActivity(intent);
-//        resultActivity.doTermSearch(term);
-//        FragmentTransaction transaction = fragmentManager.beginTransaction();
-//        transaction.replace(R.id.content_frame, resultActivity).commit();
-//        FragmentTransaction transaction = fragmentManager.beginTransaction();
-//        transaction.replace(R.id.content_frame, resultActivity).commit();
     }
 
+    public void setCategory(int category) {
+        switch (category) {
+            case 0:
+                selection = "Greenfoot";
+                break;
+            case 1:
+                selection = "keywords";
+                break;
+            case 2:
+                selection = "null";
+                break;
+            case 3:
+                selection = "statements";
+                break;
 
-    public void setCategory(long id) {
-        int position = (int) id;
-        switch (position){
-            case 97: category = "keywords";
-                break;
-            case 55: category = "Greenfoot";
-                break;
-            case 96: category = "null";
-                break;
-            case 98: category = "statements";
-                break;
         }
     }
 }
