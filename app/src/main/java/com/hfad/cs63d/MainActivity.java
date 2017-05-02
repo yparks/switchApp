@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the options menu from XML

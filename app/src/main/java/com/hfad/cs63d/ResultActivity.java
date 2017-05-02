@@ -88,7 +88,7 @@ public class ResultActivity extends Activity {
                 mWebView.loadData(definition, "text/html", null);
 
                 //Add term and definition to database
-                addTerm(term, definition);
+                addTermToHistory(term, definition);
                 Log.v(TAG, "added term");
 
             }else {
@@ -102,7 +102,7 @@ public class ResultActivity extends Activity {
         }
     }
 
-    public long addTerm(String term, String definition) {
+    public long addTermToHistory(String term, String definition) {
 
         SQLiteOpenHelper historyDatabaseHelper = new HistoryDatabaseHelper(this);
         SQLiteDatabase db = historyDatabaseHelper.getWritableDatabase();

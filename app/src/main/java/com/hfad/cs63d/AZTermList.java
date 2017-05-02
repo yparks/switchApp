@@ -100,7 +100,7 @@ public class AZTermList extends ListFragment {
                 selection = "keywords";
                 break;
             case 2:
-                selection = "null";
+                selection = "other";
                 break;
             case 3:
                 selection = "statements";
