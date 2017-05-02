@@ -63,7 +63,7 @@ public class HistoryListFragment extends ListFragment{
                     0);
             Log.d(TAG, "onCreate(): cursorAdapter: " + cursorAdapter);
             setListAdapter(cursorAdapter);
-        } catch (SQLiteException e) {d
+        } catch (SQLiteException e) {
             Toast toast;
             toast = Toast.makeText(this.getContext(), "Database Unavailable", Toast.LENGTH_LONG);
             toast.show();
