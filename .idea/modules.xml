@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Switch-CS63Dict.iml" filepath="$PROJECT_DIR$/Switch-CS63Dict.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/switch.iml" filepath="$PROJECT_DIR$/switch.iml" />
     </modules>
