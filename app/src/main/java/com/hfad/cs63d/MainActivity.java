@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private ListFragment listFragment;
     private Fragment materialFragment;
     private FragmentManager fragmentManager;
+    private FragmentTransaction transaction;
+    private final String TAG = "MainActivity";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,24 +43,32 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case R.id.action_history:
                                 //Set list fragment as instance of history class
+                                Log.d("MainActivity", "onNavigationItemSelected() " + item);
+                                transaction = fragmentManager.beginTransaction();
                                 listFragment = new HistoryListFragment();
+                                transaction.replace(R.id.content_frame, listFragment);
+                                transaction.addToBackStack(null);
+                                transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                                transaction.commit();
                                 break;
                             case R.id.action_favorites:
                                 //add your fragment here
                                 break;
                             case R.id.action_az:
-                                Log.d("MainActivity", "onNavigationItemSelected()" + item);
+                                Log.d("MainActivity", "onNavigationItemSelected() " + item);
+                                transaction = fragmentManager.beginTransaction();
                                 materialFragment = new AZCategoryMaterialList();
+                                transaction.replace(R.id.content_frame, materialFragment);
+                                transaction.addToBackStack(null);
+                                transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                                transaction.commit();
                                 break;
                         }
-                        final FragmentTransaction transaction = fragmentManager.beginTransaction();
-                        transaction.replace(R.id.content_frame, materialFragment).commit();
-                        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                        transaction.addToBackStack(null);
                         return true;
                     }
                 });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
