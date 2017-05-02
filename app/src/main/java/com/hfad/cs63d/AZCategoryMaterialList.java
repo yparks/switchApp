@@ -20,10 +20,10 @@ import android.widget.Toast;
 
 public class AZCategoryMaterialList extends Fragment {
     private static final String TAG = "AZCategoryMaterialList";
-    private AZTermList listFragment;
+    private AZTermList azTermList;
     private SQLiteDatabase db;
     private Cursor cursor;
-    private String[] categories = new String[4];
+    private String[] categories;
 
 
     @TargetApi(Build.VERSION_CODES.M)
@@ -44,8 +44,10 @@ public class AZCategoryMaterialList extends Fragment {
                     null,
                     null
             );
-            Log.d(TAG, "onCreate(): cursor: " + cursor.getCount());
-            Log.d(TAG, "onCreate(): moveToFirst(): " + cursor.moveToFirst());
+            //rows expected? 4 - 'Greenfoot', 'other', 'statements', 'keywords'
+            Log.d(TAG, "onCreate(): Number of rows returned by cursor: " + cursor.getCount());
+            categories = new String[cursor.getCount()];
+            Log.d(TAG, "onCreate(): cursor.moveToFirst()?: " + cursor.moveToFirst());
             if (cursor.moveToFirst()) {
                 while (!cursor.isAfterLast()) {
                     for (int i = 0; i < categories.length; i++) {
@@ -53,7 +55,7 @@ public class AZCategoryMaterialList extends Fragment {
                         cursor.moveToNext();
                     }
                 }
-                Log.d(TAG, "onCreate(): total[i].length " + categories.length);
+                Log.d(TAG, "onCreate(): categories[i].length = " + categories.length);
             }
         } catch (SQLiteException e) {
             Toast toast;
@@ -62,21 +64,21 @@ public class AZCategoryMaterialList extends Fragment {
         }
 
 
-        CategoryAdapter adapter = new CategoryAdapter(categories);
-        recyclerView.setAdapter(adapter);
-        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
-        recyclerView.setLayoutManager(layoutManager);
-        adapter.setListener(new CategoryAdapter.Listener() {
+        CategoryAdapter categoryAdapter = new CategoryAdapter(categories);
+        recyclerView.setAdapter(categoryAdapter);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        categoryAdapter.setListener(new CategoryAdapter.Listener() {
             @Override
             public void onClick(int position) {
-                listFragment = new AZTermList();
-                listFragment.setCategory(position);
-                Log.d(TAG, "CATEGORY: " + position);
+                azTermList = new AZTermList();
+                azTermList.setCategory(position);
+                Log.d(TAG, "CATEGORY position: " + position);
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction.addToBackStack(null);
-                transaction.replace(R.id.content_frame, listFragment).commit();
+                transaction.replace(R.id.content_frame, azTermList).commit();
             }
         });
         return recyclerView;

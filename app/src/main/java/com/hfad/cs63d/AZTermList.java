@@ -16,21 +16,29 @@ import android.widget.Toast;
 
 public class AZTermList extends ListFragment {
     private static final String TAG = "AZTermList";
+    private final static String GREENFOOT = "Greenfoot";
+    private final static String OTHER = "other";
+    private final static String STATEMENTS = "statements";
+    private final static String KEYWORDS = "keywords";
 
     private SQLiteDatabase db;
     private Cursor cursor;
     private String selection;
     private String term;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        Log.d(TAG, "ENTERING TERM DISPLAY");
-        Log.d(TAG, "Keyword clicked: " + selection);
+        Log.d(TAG, "ENTERING CATERGORY -> TERM");
+        Log.d(TAG, "CardView clicked: " + selection);
         super.onCreate(savedInstanceState);
+        getCategoryTerms(selection);
+    }
+
+    private void getCategoryTerms(String selection) {
         try {
             SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(this.getContext());
             db = dictionaryDatabaseHelper.getReadableDatabase();
+            //query the database for the terms belonging to a category clicked
             cursor = db.query(
                     DictionaryDatabaseHelper.DICTIONARY_TABLE,
                     new String[]{DictionaryDatabaseHelper.ID_COL, DictionaryDatabaseHelper.TERM_COL},
@@ -63,17 +71,12 @@ public class AZTermList extends ListFragment {
             toast = Toast.makeText(this.getContext(), "Database Unavailable", Toast.LENGTH_LONG);
             toast.show();
         }
-
     }
-
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         Log.d(TAG, "onListItemClick() long id = " + id);
-
-        Toast toast = Toast.makeText(this.getContext(), "testing", Toast.LENGTH_LONG);
-        toast.show();
-
+        //query the database by the term clicked
         cursor = db.query(
                 DictionaryDatabaseHelper.DICTIONARY_TABLE,
                 new String[]{DictionaryDatabaseHelper.TERM_COL},
@@ -94,18 +97,17 @@ public class AZTermList extends ListFragment {
     public void setCategory(int category) {
         switch (category) {
             case 0:
-                selection = "Greenfoot";
+                selection = GREENFOOT;
                 break;
             case 1:
-                selection = "keywords";
+                selection = KEYWORDS;
                 break;
             case 2:
-                selection = "other";
+                selection = OTHER;
                 break;
             case 3:
-                selection = "statements";
+                selection = STATEMENTS;
                 break;
-
         }
     }
 }
