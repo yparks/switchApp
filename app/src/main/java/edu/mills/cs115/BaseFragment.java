@@ -1,4 +1,4 @@
-package com.hfad.cs63d;
+package edu.mills.cs115;
 
 import android.content.Context;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.hfad.cs63d;
+package edu.mills.cs115;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -22,6 +22,9 @@ import com.bigkoo.convenientbanner.listener.OnItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import edu.mills.cs115.BaseFragment;
+import edu.mills.cs115.DictionaryBean;
 
 public class HomeFragment extends BaseFragment {
   //

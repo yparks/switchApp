@@ -1,6 +1,8 @@
-package com.hfad.cs63d;
+package edu.mills.cs115;
 
 import android.view.View;
+
+import edu.mills.cs115.BaseFragment;
 
 /**
  *
