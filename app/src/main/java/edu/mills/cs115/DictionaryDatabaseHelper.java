@@ -13,7 +13,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * DictionaryDatabaseHelper implements the database for dictionary table .
+ * DictionaryDatabaseHelper implements the database for dictionary table.
+ *
+ * @author barango
  */
 class DictionaryDatabaseHelper extends SQLiteOpenHelper {
     private final String TAG = getClass().toString();
@@ -32,7 +34,7 @@ class DictionaryDatabaseHelper extends SQLiteOpenHelper {
     static final String FAVORITES_COL = "favorites";
 
     /**
-     * Default constructor
+     * Default constructor.
      *
      * @param context the context
      */

@@ -18,7 +18,9 @@ import android.widget.Toast;
 
 /**
  * AZCategoryFragment implements the view for categories within the dictionary database. Categories are
- * displayed in a recycler view containing card view's.
+ * displayed in a recycler view containing card views.
+ *
+ * @author barango
  */
 public class AZCategoryFragment extends Fragment {
     private static final String TAG = "AZCategoryFragment";
@@ -73,7 +75,7 @@ public class AZCategoryFragment extends Fragment {
     }
 
     /**
-     * Creates the RecyclerView adapter for displaying category CardView's.
+     * Creates the recycler view adapter for displaying category card views.
      */
     public void createCategoryAdapter(){
         AZCategoryAdapter azCategoryAdapter = new AZCategoryAdapter(categories);

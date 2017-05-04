@@ -9,7 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 /**
- * AZCategoryAdapter implements the adapter for the RecyclerView in AZCategoryFragment.
+ * AZCategoryAdapter implements the adapter for the RecyclerView in  {@link AZCategoryFragment}.
+ *
+ * @author barango
  */
 class AZCategoryAdapter extends RecyclerView.Adapter<AZCategoryAdapter.ViewHolder> {
     private final static String TAG = "AZCategoryAdapter";
@@ -41,7 +43,7 @@ class AZCategoryAdapter extends RecyclerView.Adapter<AZCategoryAdapter.ViewHolde
     }
 
     /**
-     * Class constructor specifying the list of categories to used in a CardView.
+     * Class constructor specifying the list of categories to use in a CardView.
      *
      * @param categories the list of categories
      */

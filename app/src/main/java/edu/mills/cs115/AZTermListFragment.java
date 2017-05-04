@@ -17,6 +17,8 @@ import android.widget.Toast;
 /**
  * AZTermListFragment implements a ListFragment representation of all the terms categorized under a
  * selected category.
+ *
+ * @author barango
  */
 public class AZTermListFragment extends ListFragment {
     private static final String TAG = "AZTermListFragment";
@@ -104,7 +106,7 @@ public class AZTermListFragment extends ListFragment {
     }
 
     /**
-     * Sets the string representation of a category by the position in which was selected.
+     * Sets the string representation of a category by the position in which it was selected.
      *
      * @param position the position of the CardView that was clicked.
      */
