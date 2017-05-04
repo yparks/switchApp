@@ -2,139 +2,157 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_0ff7c3f4880a9ef5465df0445459bf2706a0111c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-25.3.1_7f3c6182ce751d597b5701012f1ac3a4a32ae0b2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.3.1_4a1c9e034fafe26d799147dc4388d9fdc2e0659b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.3.1_aea7b50d05d97d25d6b4ffe8bfa151df3c96b8f1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.3.1_6bc044c3d7d3386c32cb4e9d967bf3b158974e54.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.3.1_1fe4e87623fd304b7237718ae6209bfa993136b5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.3.1_057d788062d04e58f3d5849cfaddac53bf59f8d4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.3.1_5fc7e92719f940c14bf358bdc1846fec60113bd7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.3.1_d6f36134a22e319a88629caa02a6447a7235f5cc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.bigkoo/convenientbanner/2.0.5/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b99798f653c15a17af6779bb9f01a66f2ee6e6ef">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.bigkoo-convenientbanner-2.0.5_edc6a1801a2ad38bdd154706ec1093d69d270a4f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.3.1_4563f3b7319a77c20a38d998f9ff3e623f4f4011.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.3.1_ce92bcdcacab5045a273ebdb10f075648f3cd0a2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.3.1_d59714c3c46eb587f05eee26a1fa80ce8519a9ac.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/transition/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.3.1_79d2f57b571bf00a5c455751382ec63b1374bc46.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Robertsquared/Desktop/switch/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="/Users/Robertsquared/Desktop/switch/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.3.1_5a571e6aa9ab1b4792c9ddc0b6197819adb0eaea.jar" />
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.3.1_ceb3042801703c759d0efb91e32d598f20660f3b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_1a67d4963962f5e92217103ffbff88f14e28a86f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6843ce38554dc5249f9b7a2b6943f2e6abdd858b">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_7bda18a945a37a024e0cf5ef7455671b429bbdd9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.3.1_89653c4da4c81d66a29b32572b230de6b180fc4f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="984550735d3c48a6d6301ce4476a75ebf0e866c6">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_78f4bc81f3697e4ebd9455500b2de9c5225ee41e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.3.1_20f96939c2091bcef6bafa0ca37023e42c78acb3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.3.1_15b886b2165456a28e647da37541636f01ad2592/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.3.1_1d7055e1d804d165f539f81a6879695261a076aa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.3.1_d2296238041116303f208c9f29724d7ccbed73ee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.3.1_9c27d60b42b39d75bf7f1f626016d2978cf28803/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.3.1_00d729847528e2736debbeab0c990a9d7680b019/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.3.1_dda67bc5d27ad0f304e9da0c70c69a171ca07665/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.bigkoo/convenientbanner/2.0.5/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b99798f653c15a17af6779bb9f01a66f2ee6e6ef">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.bigkoo-convenientbanner-2.0.5_bd9eb28cfab500f57d98dd716d8a102b1d750f1a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.3.1_6708136529408ece448e45f40ed579c21904af7c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.3.1_2b366b04c89ff21f15a133a6e8780dd4ae0e5ca9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/transition/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.3.1_7e11d231ac74ca2d00bcfa37bce15728cb677e89/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/barango/Documents/AndroidStudioProjects/switch/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.3.1_7b4d8961de5daae1091c856dc41582c7ac271615/classes.dex" />
     </item>
 
 </items>
