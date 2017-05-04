@@ -97,7 +97,7 @@ public class HomeFragment extends BaseFragment {
   @Override public void onStart() {
     super.onStart();
     setDictionary();
-    banner.startTurning(2000);
+    banner.startTurning(5000);
   }
 
   @Override public void onStop() {
