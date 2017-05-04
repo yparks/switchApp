@@ -23,9 +23,6 @@ import com.bigkoo.convenientbanner.listener.OnItemClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.mills.cs115.BaseFragment;
-import edu.mills.cs115.DictionaryBean;
-
 public class HomeFragment extends BaseFragment {
   //
   private ConvenientBanner banner;
@@ -111,10 +108,18 @@ public class HomeFragment extends BaseFragment {
   }
 
   public void setDictionary() {
-    //
+
     DictionaryBean db = queryRandom();
-    title_tv.setText("Word of a day ： " + db.getTerm());
-    webView.loadDataWithBaseURL(null, db.getDefinition(), "text/html", "utf-8", null);
+    title_tv.setText("Word of the Day ：" + db.getTerm());
+
+    //Set the font and font-size of the web view text
+    String htmlStringStart = "<html><head><style type=\"text/css\">@font-face " +
+            "{font-family: MyFont;src: url(\"file:///android_asset/font/BMitra.ttf\")}body" +
+            " {font-family: MyFont;font-size: 36px;text-align: justify;}</style></head><body>";
+    String htmlStringClose = "</body></html>";
+    String myHtmlString = htmlStringStart + db.getDefinition() + htmlStringClose;
+
+    webView.loadDataWithBaseURL(null, myHtmlString, "text/html", "utf-8", null);
   }
 
   /**
