@@ -1,4 +1,4 @@
-package com.hfad.cs63d;
+package edu.mills.cs115;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -14,55 +14,52 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class AZTermList extends ListFragment {
-    private static final String TAG = "AZTermList";
-    private final static String GREENFOOT = "Greenfoot";
-    private final static String OTHER = "other";
-    private final static String STATEMENTS = "statements";
-    private final static String KEYWORDS = "keywords";
+public class HistoryListFragment extends ListFragment{
+    private static final String TAG = "HistoryListFragment";
 
     private SQLiteDatabase db;
     private Cursor cursor;
-    private String selection;
     private String term;
+    private static final String LIST_LIMIT = "50";
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        Log.d(TAG, "ENTERING CATERGORY -> TERM");
-        Log.d(TAG, "CardView clicked: " + selection);
-        super.onCreate(savedInstanceState);
-        getCategoryTerms(selection);
-    }
+        Log.d(TAG, "ENTERING TERM DISPLAY");
 
-    private void getCategoryTerms(String selection) {
+        super.onCreate(savedInstanceState);
         try {
-            SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(this.getContext());
-            db = dictionaryDatabaseHelper.getReadableDatabase();
-            //query the database for the terms belonging to a category clicked
+            SQLiteOpenHelper historyDatabaseHelper = new HistoryDatabaseHelper(this.getContext());
+            db = historyDatabaseHelper.getReadableDatabase();
             cursor = db.query(
-                    DictionaryDatabaseHelper.DICTIONARY_TABLE,
-                    new String[]{DictionaryDatabaseHelper.ID_COL, DictionaryDatabaseHelper.TERM_COL},
-                    DictionaryDatabaseHelper.CATEGORY_COL + " = ?",
-                    new String[]{selection},
+                    true,//select distinct values
+                    HistoryDatabaseHelper.DICTIONARY_TABLE,//table to query
+                    new String[]{HistoryDatabaseHelper.ID_COL, HistoryDatabaseHelper.TERM_COL},//columns to return
                     null,
                     null,
-                    null);
+                    HistoryDatabaseHelper.TERM_COL,//group by term
+                    null,
+                    HistoryDatabaseHelper.ID_COL + " DESC",//specify descending sort order
+                    LIST_LIMIT);//set a limit of 50 terms
+
             Log.d(TAG, "onCreate(): cursor: " + cursor.getCount());
+
             if (cursor.moveToFirst()) {
                 while (!cursor.isAfterLast()) {
                     int row = cursor.getInt(0);
                     String result = cursor.getString(1);
-                    Log.d(TAG, "Term " + result);
-                    Log.d(TAG, "Term row: " + row);
+//                    Log.d(TAG, "Term " + result);
+//                    Log.d(TAG, "Term row: " + row);
                     cursor.moveToNext();
                 }
             }
             Log.d(TAG, "onCreate(): context: " + getContext());
             CursorAdapter cursorAdapter = new SimpleCursorAdapter(getContext(),
-                    R.layout.az_term,
+                    R.layout.history,
                     cursor,
-                    new String[]{DictionaryDatabaseHelper.TERM_COL},
-                    new int[]{R.id.term_text},
+                    new String[]{HistoryDatabaseHelper.TERM_COL},
+                    new int[]{R.id.history_text},
                     0);
             Log.d(TAG, "onCreate(): cursorAdapter: " + cursorAdapter);
             setListAdapter(cursorAdapter);
@@ -71,17 +68,24 @@ public class AZTermList extends ListFragment {
             toast = Toast.makeText(this.getContext(), "Database Unavailable", Toast.LENGTH_LONG);
             toast.show();
         }
+
     }
+
+
+
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         Log.d(TAG, "onListItemClick() long id = " + id);
-        //query the database by the term clicked
+
+        Toast toast = Toast.makeText(this.getContext(), "testing", Toast.LENGTH_LONG);
+        toast.show();
+
         cursor = db.query(
-                DictionaryDatabaseHelper.DICTIONARY_TABLE,
-                new String[]{DictionaryDatabaseHelper.TERM_COL},
-                DictionaryDatabaseHelper.ID_COL + " = ?",
-                new String[]{Long.toString(id)},
+                HistoryDatabaseHelper.DICTIONARY_TABLE,
+                new String[]{HistoryDatabaseHelper.TERM_COL},
+                HistoryDatabaseHelper.ID_COL + " = ?",
+                new String[] {Long.toString(id)},
                 null,
                 null,
                 null);
@@ -89,25 +93,17 @@ public class AZTermList extends ListFragment {
             term = cursor.getString(0);
             Log.v(TAG, "id to term: " + term);
         }
+//        resultActivity.doTermSearch(term);
+//        FragmentTransaction transaction = fragmentManager.beginTransaction();
+//        transaction.replace(R.id.content_frame, resultActivity).commit();
+
         Intent intent = new Intent(getActivity(), ResultActivity.class);
         intent.putExtra(ResultActivity.TERM_ON_CLICK, term);
         getActivity().startActivity(intent);
-    }
-
-    public void setCategory(int category) {
-        switch (category) {
-            case 0:
-                selection = GREENFOOT;
-                break;
-            case 1:
-                selection = KEYWORDS;
-                break;
-            case 2:
-                selection = OTHER;
-                break;
-            case 3:
-                selection = STATEMENTS;
-                break;
-        }
+//        resultActivity.doTermSearch(term);
+//        FragmentTransaction transaction = fragmentManager.beginTransaction();
+//        transaction.replace(R.id.content_frame, resultActivity).commit();
+//        FragmentTransaction transaction = fragmentManager.beginTransaction();
+//        transaction.replace(R.id.content_frame, resultActivity).commit();
     }
 }
