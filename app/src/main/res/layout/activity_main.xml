@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:columnCount="4"
     android:rowCount="6"
-    tools:context=".MainActivity">
+    tools:context="edu.mills.cs115.MainActivity">
 
     <FrameLayout
         android:id="@+id/content_frame"

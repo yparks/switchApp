@@ -1,4 +1,4 @@
-package com.hfad.cs63d;
+package edu.mills.cs115;
 
 import org.junit.Test;
 

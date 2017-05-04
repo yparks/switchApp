@@ -1,4 +1,4 @@
-package com.hfad.cs63d;
+package edu.mills.cs115;
 
 import android.annotation.TargetApi;
 import android.database.Cursor;
@@ -29,7 +29,7 @@ public class AZCategoryMaterialList extends Fragment {
     @TargetApi(Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.az_category_recycler,
+        RecyclerView recyclerView = (RecyclerView) inflater.inflate(edu.mills.cs115.R.layout.az_category_recycler,
                 container, false);
         try {
             SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(this.getContext());
