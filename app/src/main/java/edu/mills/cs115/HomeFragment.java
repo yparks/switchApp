@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -108,9 +109,12 @@ public class HomeFragment extends BaseFragment {
   }
 
   public void setDictionary() {
-
     DictionaryBean db = queryRandom();
-    title_tv.setText("Word of the Day ：" + db.getTerm());
+    String colorText = "Word of the Day :  "
+                      + "<font color=\"#FF717E\"><bold>"
+                      + db.getTerm()
+                      + "</bold></font>";
+    title_tv.setText(Html.fromHtml(colorText));
 
     //Set the font and font-size of the web view text
     String htmlStringStart = "<html><head><style type=\"text/css\">@font-face " +
