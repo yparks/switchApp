@@ -110,7 +110,7 @@ public class HomeFragment extends BaseFragment {
 
   public void setDictionary() {
     DictionaryBean db = queryRandom();
-    String colorText = "Word of the Day :  "
+    String colorText = "<h1>Word of the Day:</h1>"
                       + "<font color=\"#FF717E\"><bold>"
                       + db.getTerm()
                       + "</bold></font>";
@@ -119,7 +119,7 @@ public class HomeFragment extends BaseFragment {
     //Set the font and font-size of the web view text
     String htmlStringStart = "<html><head><style type=\"text/css\">@font-face " +
             "{font-family: MyFont;src: url(\"file:///android_asset/font/BMitra.ttf\")}body" +
-            " {font-family: MyFont;font-size: 36px;text-align: justify;}</style></head><body>";
+            " {font-family: MyFont;font-size: 36px;}</style></head><body>";
     String htmlStringClose = "</body></html>";
     String myHtmlString = htmlStringStart + db.getDefinition() + htmlStringClose;
 
