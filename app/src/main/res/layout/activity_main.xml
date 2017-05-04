@@ -14,6 +14,43 @@
         android:layout_row="4"
         android:layout_column="0">
     </FrameLayout>
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_row="0"
+        android:layout_rowSpan="6"
+        />
+
+    <TextView
+        android:id="@+id/text_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/history"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/text_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_rowSpan="6"
+        android:text="@string/favorites"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/text_az"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_rowSpan="6"
+        android:text="@string/az"
+        android:visibility="gone"
+        />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"

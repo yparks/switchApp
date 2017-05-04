@@ -17,7 +17,8 @@
         <item name="android:windowBackground">@drawable/splashscreen</item>
     </style>
 
-
+    <color name="winBackground">#FFFFEC</color>
+    <color name="background">#F08080</color>
 
 </resources>
 

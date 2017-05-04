@@ -19,6 +19,7 @@ import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
     private ListFragment listFragment;
+    private Fragment HomeFragment;
     private Fragment materialFragment;
     private FragmentManager fragmentManager;
     private FragmentTransaction transaction;
@@ -39,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.action_home:
+                                Log.d("MainActivity", "onNavigationItemSelected() " + item);
+                                transaction = fragmentManager.beginTransaction();
+                                HomeFragment = new HomeFragment();
+                                transaction.replace(R.id.content_frame, HomeFragment);
+                                transaction.addToBackStack(null);
+                                transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                                transaction.commit();
                                 //add your fragment here
                                 break;
                             case R.id.action_history:
