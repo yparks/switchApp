@@ -12,12 +12,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-
+/**
+ * DictionaryDatabaseHelper implements the database for dictionary table .
+ */
 class DictionaryDatabaseHelper extends SQLiteOpenHelper {
     private final String TAG = getClass().toString();
-    private Context mHelperContex;
+    private Context context;
     private SQLiteDatabase sqlDatabase;
-    int count = 0;
 
     private static final String DB_NAME = "csdictionary";
     private static final int DB_VERSION = 1;
@@ -29,11 +30,15 @@ class DictionaryDatabaseHelper extends SQLiteOpenHelper {
     static final String DEFINITION_COL = "definition";
     static final String CATEGORY_COL = "category";
     static final String FAVORITES_COL = "favorites";
-    static final String NOTES_COL = "notes";
 
+    /**
+     * Default constructor
+     *
+     * @param context the context
+     */
     DictionaryDatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
-        mHelperContex = context;
+        this.context = context;
     }
 
     @Override
@@ -47,6 +52,13 @@ class DictionaryDatabaseHelper extends SQLiteOpenHelper {
         updateMyDatabase(db, oldVersion, newVersion);
     }
 
+    /**
+     * Checks the current version of the database and updates versions as necessary.
+     *
+     * @param db the SQLite database manager
+     * @param oldVersion the previous version of the database
+     * @param newVersion the latest version of the database
+     */
     private void updateMyDatabase(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion < 1) {
             db.execSQL("CREATE TABLE " + DICTIONARY_TABLE + " (" +
@@ -54,17 +66,19 @@ class DictionaryDatabaseHelper extends SQLiteOpenHelper {
                     TERM_COL + " TEXT, " +
                     DEFINITION_COL + " TEXT, " +
                     CATEGORY_COL + " TEXT, " +
-                    FAVORITES_COL + " NUMERIC, " +
-                    NOTES_COL + " TEXT);");
+                    FAVORITES_COL + " NUMERIC);");
             Log.v(TAG, "in updateMyDatabase()");
             loadTerms();
         }
     }
 
-    private void loadTerms() {
+    /**
+     * Loads and stores values read from input file.
+     */
+    public void loadTerms() {
         Log.d(TAG, "in loadTerms()");
         Log.d(TAG, "Loading words...");
-        Resources resources = mHelperContex.getResources();
+        Resources resources = context.getResources();
         InputStream inputStream = resources.openRawResource(R.raw.cs63dict_singleline_def);
         BufferedReader buffReader = new BufferedReader(new InputStreamReader(inputStream));
         try {
@@ -73,7 +87,6 @@ class DictionaryDatabaseHelper extends SQLiteOpenHelper {
                 String[] strings = TextUtils.split(line, "⏣");
                 if (strings.length < 3) continue;
                 long id = addTerm(strings[0].trim(), strings[1].trim(), strings[2].trim());
-                count++;
                 if (id < 0) {
                     Log.d(TAG, "Unable to add word: " + strings[0].trim());
                 }
@@ -84,12 +97,20 @@ class DictionaryDatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    private long addTerm(String term, String definition, String category) {
+    /**
+     * Adds values into the dictionary table.
+     *
+     * @param term the term
+     * @param definition the definition of the term
+     * @param category the category of the term
+     * @return the row ID of the newly inserted row, or -1 if an error occurred
+     */
+    public long addTerm(String term, String definition, String category) {
         ContentValues contentValues = new ContentValues();
         contentValues.put(TERM_COL, term);
         contentValues.put(DEFINITION_COL, definition);
         contentValues.put(CATEGORY_COL, category);
-        Log.d(TAG, "Row #" + count + " populated: " + contentValues);
+        Log.d(TAG, "Row populated: " + contentValues);
         return sqlDatabase.insert(DICTIONARY_TABLE, null, contentValues);
     }
 }

@@ -8,28 +8,52 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
-    private final static String TAG = "CategoryAdapter";
+/**
+ * AZCategoryAdapter implements the adapter for the RecyclerView in AZCategoryFragment.
+ */
+class AZCategoryAdapter extends RecyclerView.Adapter<AZCategoryAdapter.ViewHolder> {
+    private final static String TAG = "AZCategoryAdapter";
     private String[] categories;
     private Listener listener;
 
-
+    /**
+     *
+     */
     public static interface Listener {
         public void onClick(int position);
     }
 
+    /**
+     * Provides and holds a reference to the CardView used in the RecyclerView.
+     */
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private CardView cardView;
-        public ViewHolder(CardView v) {
-            super(v);
-            cardView = v;
+
+        /**
+         * Specifies the CardView to store in the RecyclerView.
+         *
+         * @param cardView the CardView to store
+         */
+        public ViewHolder(CardView cardView) {
+            super(cardView);
+            this.cardView = cardView;
         }
     }
 
-    public CategoryAdapter(String[] categories){
+    /**
+     * Class constructor specifying the list of categories to used in a CardView.
+     *
+     * @param categories the list of categories
+     */
+    public AZCategoryAdapter(String[] categories){
         this.categories = categories;
     }
 
+    /**
+     * Registers the CardView listener.
+     *
+     * @param listener the listener to register
+     */
     public void setListener(Listener listener) {
         this.listener = listener;
     }

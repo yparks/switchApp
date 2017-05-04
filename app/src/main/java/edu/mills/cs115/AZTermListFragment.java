@@ -14,8 +14,12 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class AZTermList extends ListFragment {
-    private static final String TAG = "AZTermList";
+/**
+ * AZTermListFragment implements a ListFragment representation of all the terms categorized under a
+ * selected category.
+ */
+public class AZTermListFragment extends ListFragment {
+    private static final String TAG = "AZTermListFragment";
     private final static String GREENFOOT = "Greenfoot";
     private final static String OTHER = "other";
     private final static String STATEMENTS = "statements";
@@ -34,6 +38,11 @@ public class AZTermList extends ListFragment {
         getCategoryTerms(selection);
     }
 
+    /**
+     * Gets all the terms filed under the selected category and displays them in a ListView.
+     *
+     * @param selection the category to be queried
+     */
     private void getCategoryTerms(String selection) {
         try {
             SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(this.getContext());
@@ -94,8 +103,13 @@ public class AZTermList extends ListFragment {
         getActivity().startActivity(intent);
     }
 
-    public void setCategory(int category) {
-        switch (category) {
+    /**
+     * Sets the string representation of a category by the position in which was selected.
+     *
+     * @param position the position of the CardView that was clicked.
+     */
+    public void setCategory(int position) {
+        switch (position) {
             case 0:
                 selection = GREENFOOT;
                 break;

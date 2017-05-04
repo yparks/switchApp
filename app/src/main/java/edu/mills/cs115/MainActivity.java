@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.action_az:
                                 Log.d("MainActivity", "onNavigationItemSelected() " + item);
                                 transaction = fragmentManager.beginTransaction();
-                                materialFragment = new AZCategoryMaterialList();
+                                materialFragment = new AZCategoryFragment();
                                 transaction.replace(R.id.content_frame, materialFragment);
                                 transaction.addToBackStack(null);
                                 transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
