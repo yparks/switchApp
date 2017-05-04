@@ -29,10 +29,11 @@
           android:id="@+id/title_rl"
           >
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/title_tv"
             android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
             android:textStyle="bold"
             android:textSize="22sp"
             android:textColor="#000000"
