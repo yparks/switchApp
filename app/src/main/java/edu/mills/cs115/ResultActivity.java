@@ -10,18 +10,23 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.util.Log;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Handles the intent that performs a term search. Displays a view containing a
+ * term and a definition in a WebView format. Adds a term to the history database
+ * when the user has viewed the term.
+ *
+ * @author barango
+ * @author Roberto Amparán (mr.amparan@gmail.com)
+ */
 public class ResultActivity extends Activity {
-
     public static final String TERM_ON_CLICK = "";
-
     private static final String TAG = "ResultActivity";
 
-    private WebView mWebView;
+    private WebView webDisplay;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,15 @@ public class ResultActivity extends Activity {
         }
     }
 
+    /**
+     * Queries the database for a particular word and displays the result in a WebView.
+     * Calls the addTermToHistory method to add the term and definition into the database.
+     *
+     * @param query the term to query
+     *
+     * @author barango
+     * @author Roberto Amparán (mr.amparan@gmail.com)
+     */
     public void doTermSearch(String query) {
         Log.v(TAG, "Reached doTermSearch() with " + query);
         try{
@@ -61,36 +75,16 @@ public class ResultActivity extends Activity {
                 String term = cursor.getString(1);
                 String definition = cursor.getString(2);
 
-//                //Term
-//                TextView termView = (TextView) findViewById(R.id.term);
-//                termView.setText(term);
-//
-//                //Definition
-//                TextView definitionView = (TextView) findViewById(R.id.definition);
-////                definitionView.setText(Html.fromHtml(definition));
-//
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) { // for 24 api and more
-//                    definitionView.setText(Html.fromHtml(definition, Html.FROM_HTML_MODE_LEGACY)); }
-//                else {
-//                    //for older api
-//                    definitionView.setText(Html.fromHtml(definition));
-////                    definitionView.setText(new HtmlSpanner().fromHtml(definition));
-//
-//                }
-///
                 //Term
                 TextView termView = (TextView) findViewById(R.id.term);
                 termView.setText(term);
                 //Definition
-                mWebView = (WebView) findViewById(R.id.definition);
-                WebSettings webSettings = mWebView.getSettings();
-
-                mWebView.loadData(definition, "text/html", null);
+                webDisplay = (WebView) findViewById(R.id.definition);
+                webDisplay.loadData(definition, "text/html", null);
 
                 //Add term and definition to database
                 addTermToHistory(term, definition);
                 Log.v(TAG, "added term");
-
             }else {
                 Toast toast = Toast.makeText(this, "Term not found", Toast.LENGTH_SHORT);
                 toast.show();
@@ -102,6 +96,14 @@ public class ResultActivity extends Activity {
         }
     }
 
+    /**
+     * Adds the term to the database.
+     *
+     * @param term the term from the query
+     * @param definition the definition from the query
+     *
+     * @author Roberto Amparán (mr.amparan@gmail.com)
+     */
     public long addTermToHistory(String term, String definition) {
 
         SQLiteOpenHelper historyDatabaseHelper = new HistoryDatabaseHelper(this);
