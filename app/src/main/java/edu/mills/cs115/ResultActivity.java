@@ -154,7 +154,8 @@ public class ResultActivity extends Activity {
         }
         protected Boolean doInBackground(Integer... terms) {
             Log.v(TAG, "Entered doInBackground");
-            int termNo = 0;
+//            int termNo = terms[0];
+            int termNo = 1;
             Log.v(TAG, "Set termNo");
             SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(ResultActivity.this);
             Log.v(TAG, "Created databaseHelper object");
@@ -163,8 +164,8 @@ public class ResultActivity extends Activity {
                 db.update(DictionaryDatabaseHelper.DICTIONARY_TABLE, termValues,
                         "_id = ?", new String[] {Integer.toString(termNo)});
                 Log.v(TAG, "Created Database");
-                db.close();
-                Log.v(TAG, "Closed database");
+//                db.close();
+//                Log.v(TAG, "Closed database");
                 return true;
             } catch(SQLiteException e) {
                 return false;
