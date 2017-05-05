@@ -32,7 +32,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
  * @author barango
  * @author Roberto Amparán (mr.amparan@gmail.com)
  * @author Ying Parks
- * @author Ying Parks
+ * @author Ashley Vo
  */
 public class MainActivity extends AppCompatActivity {
     private ListFragment listFragment;
