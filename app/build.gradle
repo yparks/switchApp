@@ -39,4 +39,5 @@ dependencies {
     //    compile "com.android.support:design:25.0.0"
     //    compile 'com.bigkoo:convenientbanner:2.0.5'
     compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
 }
