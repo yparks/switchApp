@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
+    private ListFragment favListFragment;
     private ListFragment listFragment;
     private Fragment HomeFragment;
     private Fragment materialFragment;
@@ -60,7 +61,13 @@ public class MainActivity extends AppCompatActivity {
                                 transaction.commit();
                                 break;
                             case R.id.action_favorites:
-                                //add your fragment here
+                                Log.d("MainActivity", "onNavigationItemSelected() " + item);
+                                transaction = fragmentManager.beginTransaction();
+                                favListFragment = new FavoritesListFragment();
+                                transaction.replace(R.id.content_frame, favListFragment);
+                                transaction.addToBackStack(null);
+                                transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                                transaction.commit();
                                 break;
                             case R.id.action_az:
                                 Log.d("MainActivity", "onNavigationItemSelected() " + item);

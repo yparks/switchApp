@@ -10,12 +10,16 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.os.AsyncTask;
 
 public class ResultActivity extends Activity {
+    public static final String EXTRA_TERMNO = "termNo";
 
     public static final String TERM_ON_CLICK = "";
 
@@ -27,6 +31,8 @@ public class ResultActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_result);
+
+        int termNo = (Integer)getIntent().getExtras().get(EXTRA_TERMNO);
 
         Intent intent = getIntent();
 
@@ -46,10 +52,10 @@ public class ResultActivity extends Activity {
         Log.v(TAG, "Reached doTermSearch() with " + query);
         try{
             SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(this);
-            SQLiteDatabase db = dictionaryDatabaseHelper.getReadableDatabase();
+            SQLiteDatabase db = dictionaryDatabaseHelper.getWritableDatabase();
             Cursor cursor = db.query(
                     DictionaryDatabaseHelper.DICTIONARY_TABLE,
-                    new String[] {DictionaryDatabaseHelper.ID_COL, DictionaryDatabaseHelper.TERM_COL, DictionaryDatabaseHelper.DEFINITION_COL},
+                    new String[] {DictionaryDatabaseHelper.ID_COL, DictionaryDatabaseHelper.TERM_COL, DictionaryDatabaseHelper.DEFINITION_COL, DictionaryDatabaseHelper.FAVORITES_COL},
                     DictionaryDatabaseHelper.TERM_COL + " = ?",
                     new String[] {query},
                     null,
@@ -60,6 +66,7 @@ public class ResultActivity extends Activity {
                 Log.v(TAG, "cursor.moveToFirst()? " + cursor.moveToFirst());
                 String term = cursor.getString(1);
                 String definition = cursor.getString(2);
+                boolean isFavorite = (cursor.getInt(3)==1);
 
 //                //Term
 //                TextView termView = (TextView) findViewById(R.id.term);
@@ -81,6 +88,7 @@ public class ResultActivity extends Activity {
                 //Term
                 TextView termView = (TextView) findViewById(R.id.term);
                 termView.setText(term);
+
                 //Definition
                 mWebView = (WebView) findViewById(R.id.definition);
                 WebSettings webSettings = mWebView.getSettings();
@@ -91,6 +99,10 @@ public class ResultActivity extends Activity {
                 addTermToHistory(term, definition);
                 Log.v(TAG, "added term");
 
+                //Populate fav checkbox
+                CheckBox favorite = (CheckBox)findViewById(R.id.favorite);
+                favorite.setChecked(isFavorite);
+
             }else {
                 Toast toast = Toast.makeText(this, "Term not found", Toast.LENGTH_SHORT);
                 toast.show();
@@ -99,6 +111,54 @@ public class ResultActivity extends Activity {
         } catch (SQLiteException e) {
             Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT);
             toast.show();
+        }
+    }
+
+    //Update database when checkbox is clicked
+    public void onFavoriteClicked (View view) {
+            int termNo = (Integer)getIntent().getExtras().get("termNo");
+            new UpdateFavoriteTask().execute(termNo);
+//        int termNo = (Integer) getIntent().getExtras().get("termNo");
+//        CheckBox favorite = (CheckBox) findViewById(R.id.favorite);
+//        ContentValues termValues = new ContentValues();
+//        termValues.put(DictionaryDatabaseHelper.FAVORITES_COL, favorite.isChecked());
+//        SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(this);
+//        SQLiteDatabase db = dictionaryDatabaseHelper.getWritableDatabase();
+//        try {
+//            db.update(DictionaryDatabaseHelper.DICTIONARY_TABLE, termValues, "=?", new String[]{
+//                    Integer.toString(termNo)});
+//            db.close();
+//        } catch (SQLiteException e) {
+//            Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT);
+//            toast.show();
+//        }
+    }
+
+    private class UpdateFavoriteTask extends AsyncTask<Integer, Void, Boolean> {
+        ContentValues termValues;
+        protected void onPreExecute() {
+            CheckBox favorite = (CheckBox)findViewById(R.id.favorite);
+            termValues = new ContentValues(); termValues.put(DictionaryDatabaseHelper.FAVORITES_COL, favorite.isChecked());
+        }
+        protected Boolean doInBackground(Integer... terms) {
+            int termNo = terms[0];
+            SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(ResultActivity.this);
+            try {
+                SQLiteDatabase db = dictionaryDatabaseHelper.getWritableDatabase();
+                db.update(DictionaryDatabaseHelper.TERM_COL, termValues,
+                        "_id = ?", new String[] {Integer.toString(termNo)});
+                db.close();
+                return true;
+            } catch(SQLiteException e) {
+                return false;
+            }
+        }
+        protected void onPostExecute(Boolean success) {
+            if (!success) {
+                Toast toast = Toast.makeText(ResultActivity.this,
+                        "Database unavailable", Toast.LENGTH_SHORT);
+                toast.show();
+            }
         }
     }
 

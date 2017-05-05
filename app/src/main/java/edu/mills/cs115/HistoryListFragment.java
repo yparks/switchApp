@@ -22,8 +22,6 @@ public class HistoryListFragment extends ListFragment{
     private String term;
     private static final String LIST_LIMIT = "50";
 
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "ENTERING TERM DISPLAY");
