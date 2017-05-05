@@ -8,15 +8,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.os.AsyncTask;
 
 public class ResultActivity extends Activity {
     public static final String EXTRA_TERMNO = "termNo";
@@ -29,11 +28,13 @@ public class ResultActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "Entered onCreate()");
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "Called super");
         setContentView(R.layout.search_result);
-
-        int termNo = (Integer)getIntent().getExtras().get(EXTRA_TERMNO);
-
+        Log.d(TAG, "called setContentView()");
+//        int termNo = (Integer)getIntent().getExtras().get(EXTRA_TERMNO);
+        Log.d(TAG, "got termNo");
         Intent intent = getIntent();
 
         Log.d(TAG, "onCreate(): getIntent() = " + intent.getExtras());
@@ -65,8 +66,11 @@ public class ResultActivity extends Activity {
             if (cursor.moveToFirst()){
                 Log.v(TAG, "cursor.moveToFirst()? " + cursor.moveToFirst());
                 String term = cursor.getString(1);
+                Log.v(TAG, "cursor move to second?");
                 String definition = cursor.getString(2);
+                Log.v(TAG, "cursor move to third?");
                 boolean isFavorite = (cursor.getInt(3)==1);
+
 
 //                //Term
 //                TextView termView = (TextView) findViewById(R.id.term);
@@ -91,7 +95,7 @@ public class ResultActivity extends Activity {
 
                 //Definition
                 mWebView = (WebView) findViewById(R.id.definition);
-                WebSettings webSettings = mWebView.getSettings();
+                mWebView.getSettings().setJavaScriptEnabled(true);
 
                 mWebView.loadData(definition, "text/html", null);
 
@@ -100,8 +104,10 @@ public class ResultActivity extends Activity {
                 Log.v(TAG, "added term");
 
                 //Populate fav checkbox
+
                 CheckBox favorite = (CheckBox)findViewById(R.id.favorite);
                 favorite.setChecked(isFavorite);
+                Log.v(TAG, "declared checkBox");
 
             }else {
                 Toast toast = Toast.makeText(this, "Term not found", Toast.LENGTH_SHORT);
@@ -116,8 +122,10 @@ public class ResultActivity extends Activity {
 
     //Update database when checkbox is clicked
     public void onFavoriteClicked (View view) {
-            int termNo = (Integer)getIntent().getExtras().get("termNo");
-            new UpdateFavoriteTask().execute(termNo);
+            Log.v(TAG, "Entered onFavoriteClicked()");
+//            int termNo = (Integer)getIntent().getExtras().get("termNo");
+            new UpdateFavoriteTask().execute((Integer)getIntent().getExtras().get("termNo"));
+        Log.v(TAG, "Exited onFavoriteClicked");
 //        int termNo = (Integer) getIntent().getExtras().get("termNo");
 //        CheckBox favorite = (CheckBox) findViewById(R.id.favorite);
 //        ContentValues termValues = new ContentValues();
@@ -136,29 +144,41 @@ public class ResultActivity extends Activity {
 
     private class UpdateFavoriteTask extends AsyncTask<Integer, Void, Boolean> {
         ContentValues termValues;
+
         protected void onPreExecute() {
+            Log.v(TAG, "Entered onPreExecute()");
             CheckBox favorite = (CheckBox)findViewById(R.id.favorite);
+            Log.v(TAG, "Declared favorite variable");
             termValues = new ContentValues(); termValues.put(DictionaryDatabaseHelper.FAVORITES_COL, favorite.isChecked());
+            Log.v(TAG, "Set termValues as ContentValues: " + termValues.toString());
         }
         protected Boolean doInBackground(Integer... terms) {
-            int termNo = terms[0];
+            Log.v(TAG, "Entered doInBackground");
+            int termNo = 0;
+            Log.v(TAG, "Set termNo");
             SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(ResultActivity.this);
+            Log.v(TAG, "Created databaseHelper object");
             try {
                 SQLiteDatabase db = dictionaryDatabaseHelper.getWritableDatabase();
-                db.update(DictionaryDatabaseHelper.TERM_COL, termValues,
+                db.update(DictionaryDatabaseHelper.DICTIONARY_TABLE, termValues,
                         "_id = ?", new String[] {Integer.toString(termNo)});
+                Log.v(TAG, "Created Database");
                 db.close();
+                Log.v(TAG, "Closed database");
                 return true;
             } catch(SQLiteException e) {
                 return false;
             }
+
         }
         protected void onPostExecute(Boolean success) {
+            Log.v(TAG, "Entered onPostExecute()");
             if (!success) {
                 Toast toast = Toast.makeText(ResultActivity.this,
                         "Database unavailable", Toast.LENGTH_SHORT);
                 toast.show();
             }
+            Log.v(TAG, "Exited onPostExecute()");
         }
     }
 

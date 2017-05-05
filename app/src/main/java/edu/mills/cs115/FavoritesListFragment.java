@@ -11,7 +11,6 @@ import android.support.v4.widget.CursorAdapter;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -38,7 +37,7 @@ public class FavoritesListFragment extends ListFragment {
                     new String[]{DictionaryDatabaseHelper.ID_COL, DictionaryDatabaseHelper.TERM_COL},
                     DictionaryDatabaseHelper.FAVORITES_COL + " = 1",//columns to return
                     null,
-                    null,
+                    HistoryDatabaseHelper.TERM_COL,
                     null,
                     DictionaryDatabaseHelper.ID_COL + " DESC",
                     LIST_LIMIT);
@@ -49,8 +48,8 @@ public class FavoritesListFragment extends ListFragment {
                 while (!cursor.isAfterLast()) {
                     int row = cursor.getInt(0);
                     String result = cursor.getString(1);
-//                    Log.d(TAG, "Term " + result);
-//                    Log.d(TAG, "Term row: " + row);
+                    Log.d(TAG, "Term " + result);
+                    Log.d(TAG, "Term row: " + row);
                     cursor.moveToNext();
                 }
             }
