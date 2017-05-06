@@ -7,4 +7,6 @@
     <string name="favorites">Favorites</string>
     <string name="history">History</string>
     <string name="az">A-Z</string>
+    <string name="favorite">Favorite</string>
+    <string name="fav">Your Favorite Terms</string>
 </resources>
