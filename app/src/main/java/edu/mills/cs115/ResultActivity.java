@@ -26,6 +26,11 @@ public class ResultActivity extends Activity {
 
     private WebView mWebView;
 
+    //Att: Barbara + Ashley
+    //I set the id obtained from the cursor to a class variable so that it could be accessed
+    //by onFavoriteClicked later. What's the better option to do this?
+    private int id;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "Entered onCreate()");
@@ -33,8 +38,11 @@ public class ResultActivity extends Activity {
         Log.d(TAG, "Called super");
         setContentView(R.layout.search_result);
         Log.d(TAG, "called setContentView()");
+
+        //Att: Barbara + Ashley
+        //termNO... causes a NullPointerException in Java for some reason. I took this out and it still works.
 //        int termNo = (Integer)getIntent().getExtras().get(EXTRA_TERMNO);
-        Log.d(TAG, "got termNo");
+//        Log.d(TAG, "got termNo");
         Intent intent = getIntent();
 
         Log.d(TAG, "onCreate(): getIntent() = " + intent.getExtras());
@@ -50,6 +58,8 @@ public class ResultActivity extends Activity {
     }
 
     public void doTermSearch(String query) {
+
+
         Log.v(TAG, "Reached doTermSearch() with " + query);
         try{
             SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(this);
@@ -65,30 +75,22 @@ public class ResultActivity extends Activity {
             Log.d(TAG, "doTermSearch() row count: " + cursor.getCount());
             if (cursor.moveToFirst()){
                 Log.v(TAG, "cursor.moveToFirst()? " + cursor.moveToFirst());
+
+                //Att: Barbara + Ashley
+                //I set the id obtained from the cursor to a class variable so that it could be accessed
+                //by onFavoriteClicked later. What's the better option to do this?
+                id = cursor.getInt(0);
+                Log.v(TAG, "id: " + id);
                 String term = cursor.getString(1);
                 Log.v(TAG, "cursor move to second?");
+                Log.v(TAG, "term: " + term);
                 String definition = cursor.getString(2);
                 Log.v(TAG, "cursor move to third?");
+                Log.v(TAG, "definition: " + definition);
                 boolean isFavorite = (cursor.getInt(3)==1);
+                Log.v(TAG, "cursor move to third?");
+                Log.v(TAG, "isFavorite: " + isFavorite);
 
-
-//                //Term
-//                TextView termView = (TextView) findViewById(R.id.term);
-//                termView.setText(term);
-//
-//                //Definition
-//                TextView definitionView = (TextView) findViewById(R.id.definition);
-////                definitionView.setText(Html.fromHtml(definition));
-//
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) { // for 24 api and more
-//                    definitionView.setText(Html.fromHtml(definition, Html.FROM_HTML_MODE_LEGACY)); }
-//                else {
-//                    //for older api
-//                    definitionView.setText(Html.fromHtml(definition));
-////                    definitionView.setText(new HtmlSpanner().fromHtml(definition));
-//
-//                }
-///
                 //Term
                 TextView termView = (TextView) findViewById(R.id.term);
                 termView.setText(term);
@@ -104,7 +106,6 @@ public class ResultActivity extends Activity {
                 Log.v(TAG, "added term");
 
                 //Populate fav checkbox
-
                 CheckBox favorite = (CheckBox)findViewById(R.id.favorite);
                 favorite.setChecked(isFavorite);
                 Log.v(TAG, "declared checkBox");
@@ -122,24 +123,20 @@ public class ResultActivity extends Activity {
 
     //Update database when checkbox is clicked
     public void onFavoriteClicked (View view) {
-            Log.v(TAG, "Entered onFavoriteClicked()");
-//            int termNo = (Integer)getIntent().getExtras().get("termNo");
-            new UpdateFavoriteTask().execute((Integer)getIntent().getExtras().get("termNo"));
+        Log.v(TAG, "Entered onFavoriteClicked()");
+
+        //Att: Barbara + Ashley
+        //This statement causes a null pointer exception for some reason.
+        //int termNo = (Integer)getIntent().getExtras().get(String.valueOf(id));
+
+        //Att: Barbara + Ashley
+        //This is the problem statement. This makes an attempt to get a termNo, but it is returning
+        //null
+
+        new UpdateFavoriteTask().execute(id);
+
+        Log.v(TAG, "executed AsyncTask");
         Log.v(TAG, "Exited onFavoriteClicked");
-//        int termNo = (Integer) getIntent().getExtras().get("termNo");
-//        CheckBox favorite = (CheckBox) findViewById(R.id.favorite);
-//        ContentValues termValues = new ContentValues();
-//        termValues.put(DictionaryDatabaseHelper.FAVORITES_COL, favorite.isChecked());
-//        SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(this);
-//        SQLiteDatabase db = dictionaryDatabaseHelper.getWritableDatabase();
-//        try {
-//            db.update(DictionaryDatabaseHelper.DICTIONARY_TABLE, termValues, "=?", new String[]{
-//                    Integer.toString(termNo)});
-//            db.close();
-//        } catch (SQLiteException e) {
-//            Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT);
-//            toast.show();
-//        }
     }
 
     private class UpdateFavoriteTask extends AsyncTask<Integer, Void, Boolean> {
@@ -154,8 +151,7 @@ public class ResultActivity extends Activity {
         }
         protected Boolean doInBackground(Integer... terms) {
             Log.v(TAG, "Entered doInBackground");
-//            int termNo = terms[0];
-            int termNo = 1;
+            int termNo = terms[0];
             Log.v(TAG, "Set termNo");
             SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(ResultActivity.this);
             Log.v(TAG, "Created databaseHelper object");
@@ -164,6 +160,10 @@ public class ResultActivity extends Activity {
                 db.update(DictionaryDatabaseHelper.DICTIONARY_TABLE, termValues,
                         "_id = ?", new String[] {Integer.toString(termNo)});
                 Log.v(TAG, "Created Database");
+
+                //Att: Barbara + Ashley
+                //This database shouldn't be closed.
+
 //                db.close();
 //                Log.v(TAG, "Closed database");
                 return true;
