@@ -24,16 +24,14 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends AppCompatActivity {
+    private ListFragment favListFragment;
     private ListFragment listFragment;
     private Fragment HomeFragment;
     private Fragment materialFragment;
     private FragmentManager fragmentManager;
     private FragmentTransaction transaction;
     private final String TAG = "MainActivity";
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
+
     private GoogleApiClient client;
 
     public void loadHomeFragment(){
@@ -43,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         transaction.commit();
-
     }
 
     @Override
@@ -51,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fragmentManager = getSupportFragmentManager();
-        //Load HomeFragment once MianActivity Launches
+        //Load HomeFragment once MainActivity Launches
         loadHomeFragment();
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
@@ -77,7 +74,13 @@ public class MainActivity extends AppCompatActivity {
                                 transaction.commit();
                                 break;
                             case R.id.action_favorites:
-                                //add your fragment here
+                                Log.d("MainActivity", "onNavigationItemSelected() " + item);
+                                transaction = fragmentManager.beginTransaction();
+                                favListFragment = new FavoritesListFragment();
+                                transaction.replace(R.id.content_frame, favListFragment);
+                                transaction.addToBackStack(null);
+                                transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                                transaction.commit();
                                 break;
                             case R.id.action_az:
                                 Log.d("MainActivity", "onNavigationItemSelected() " + item);
@@ -92,8 +95,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     }
                 });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
+
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
@@ -119,14 +121,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
-                .setName("Main Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
+                .setName("Main Page")
                 .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
                 .build();
         return new Action.Builder(Action.TYPE_VIEW)
@@ -139,8 +136,6 @@ public class MainActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client.connect();
         AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
@@ -149,8 +144,6 @@ public class MainActivity extends AppCompatActivity {
     public void onStop() {
         super.onStop();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
     }

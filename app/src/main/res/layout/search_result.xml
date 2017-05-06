@@ -13,19 +13,20 @@
         android:layout_height="wrap_content" />
 
     <CheckBox
-        android:text="CheckBox"
+        android:text="@string/favorite"
         android:layout_width="wrap_content"
-        android:id="@+id/checkBox"
+        android:id="@+id/favorite"
         android:layout_height="wrap_content"
         android:layout_below="@+id/term"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="onFavoriteClicked"/>
 
     <WebView
         android:id="@+id/definition"
         android:textSize="18sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/checkBox"
+        android:layout_below="@+id/favorite"
         android:layout_alignParentStart="true">
     </WebView>
 </RelativeLayout>
