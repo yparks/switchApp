@@ -15,9 +15,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 /**
- * Implements a ListFragment, which displays the contents from the history table
- * as a list. The ListFragment comprises terms the user has seen. It is listed in
- * descending order, it displays only distinct values, and it sets a limit of fifty.
+ * HistoryListFragment implements a list view of all the most recently viewed definitions.
+ * The list is presented in descending order with a limit of fifty distinct values.
  *
  * @author Roberto Amparán (mr.amparan@gmail.com)
  */

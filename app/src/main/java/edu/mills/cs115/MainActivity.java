@@ -24,10 +24,8 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 /**
- * The top-level activity for the CS63 dictionary switch. It allows users to launch
- * {@link HomeFragment}, {@link HistoryListFragment}, and {@link AZCategoryFragment}.
- * It Contains the search view and the bottom navigation bar. It also displays a
- * meme carousel fragment and a "Word of the Day" fragment.
+ * The top-level activity that manages the navigation between fragments and implements the view
+ * for the entire application.
  *
  * @author barango
  * @author Roberto Amparán (mr.amparan@gmail.com)
@@ -54,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         transaction.commit();
-
     }
 
     @Override
