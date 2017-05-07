@@ -4,8 +4,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
 
 <img width="347" alt="switch1" src="https://cloud.githubusercontent.com/assets/13029161/25784431/cc8eef90-3321-11e7-8000-182e9c4e9cb4.png"><img width="350" alt="switch_vertical" src="https://cloud.githubusercontent.com/assets/13029161/25778124/a0deab56-32a9-11e7-9049-72ccebee0f88.png">
 
