@@ -47,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Display icon in action bar
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        //Delete title
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         fragmentManager = getSupportFragmentManager();
         //Load HomeFragment once MainActivity Launches
         loadHomeFragment();
