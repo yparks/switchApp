@@ -23,6 +23,15 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+/**
+ * The top-level activity that manages the navigation between fragments and implements the view
+ * for the entire application.
+ *
+ * @author barango
+ * @author Roberto Amparán (mr.amparan@gmail.com)
+ * @author Ying Parks
+ * @author Ashley Vo
+ */
 public class MainActivity extends AppCompatActivity {
     private ListFragment favListFragment;
     private ListFragment listFragment;

@@ -17,11 +17,19 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Handles the intent that performs a term search. Displays a view containing a
+ * term and a definition in a WebView format. Adds a term to the history database
+ * when the user has viewed the term.
+ *
+ * @author barango
+ * @author Roberto Amparán (mr.amparan@gmail.com)
+ */
 public class ResultActivity extends Activity {
     public static final String TERM_ON_CLICK = "";
     private static final String TAG = "ResultActivity";
 
-    private WebView mWebView;
+    private WebView webDisplay;
 
     //Set the id obtained from the cursor to a class variable so that it could be accessed
     //by onFavoriteClicked later.
@@ -49,6 +57,15 @@ public class ResultActivity extends Activity {
         }
     }
 
+    /**
+     * Queries the database for a particular word and displays the result in a WebView.
+     * Calls the addTermToHistory method to add the term and definition into the database.
+     *
+     * @param query the term to query
+     *
+     * @author barango
+     * @author Roberto Amparán (mr.amparan@gmail.com)
+     */
     public void doTermSearch(String query) {
 
 
@@ -100,7 +117,6 @@ public class ResultActivity extends Activity {
                 CheckBox favorite = (CheckBox)findViewById(R.id.favorite);
                 favorite.setChecked(isFavorite);
                 Log.v(TAG, "declared checkBox");
-
             }else {
                 Toast toast = Toast.makeText(this, "Term not found", Toast.LENGTH_SHORT);
                 toast.show();
@@ -146,7 +162,6 @@ public class ResultActivity extends Activity {
             } catch(SQLiteException e) {
                 return false;
             }
-
         }
         protected void onPostExecute(Boolean success) {
             Log.v(TAG, "Entered onPostExecute()");
@@ -159,6 +174,14 @@ public class ResultActivity extends Activity {
         }
     }
 
+    /**
+     * Adds the term to the database.
+     *
+     * @param term the term from the query
+     * @param definition the definition from the query
+     *
+     * @author Roberto Amparán (mr.amparan@gmail.com)
+     */
     public long addTermToHistory(String term, String definition) {
 
         SQLiteOpenHelper historyDatabaseHelper = new HistoryDatabaseHelper(this);

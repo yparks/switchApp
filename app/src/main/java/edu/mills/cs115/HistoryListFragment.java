@@ -14,6 +14,12 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
+/**
+ * HistoryListFragment implements a list view of all the most recently viewed definitions.
+ * The list is presented in descending order with a limit of fifty distinct values.
+ *
+ * @author Roberto Amparán (mr.amparan@gmail.com)
+ */
 public class HistoryListFragment extends ListFragment{
     private static final String TAG = "HistoryListFragment";
 
@@ -31,15 +37,15 @@ public class HistoryListFragment extends ListFragment{
             SQLiteOpenHelper historyDatabaseHelper = new HistoryDatabaseHelper(this.getContext());
             db = historyDatabaseHelper.getReadableDatabase();
             cursor = db.query(
-                    true,//select distinct values
-                    HistoryDatabaseHelper.DICTIONARY_TABLE,//table to query
-                    new String[]{HistoryDatabaseHelper.ID_COL, HistoryDatabaseHelper.TERM_COL},//columns to return
+                    true, //select distinct values
+                    HistoryDatabaseHelper.DICTIONARY_TABLE, //table to query
+                    new String[]{HistoryDatabaseHelper.ID_COL, HistoryDatabaseHelper.TERM_COL}, //columns to return
                     null,
                     null,
-                    HistoryDatabaseHelper.TERM_COL,//group by term
+                    HistoryDatabaseHelper.TERM_COL, //group by term
                     null,
-                    HistoryDatabaseHelper.ID_COL + " DESC",//specify descending sort order
-                    LIST_LIMIT);//set a limit of 50 terms
+                    HistoryDatabaseHelper.ID_COL + " DESC", //specify descending sort order
+                    LIST_LIMIT); //set a limit of 50 terms
 
             Log.d(TAG, "onCreate(): cursor: " + cursor.getCount());
 
@@ -47,8 +53,8 @@ public class HistoryListFragment extends ListFragment{
                 while (!cursor.isAfterLast()) {
                     int row = cursor.getInt(0);
                     String result = cursor.getString(1);
-//                    Log.d(TAG, "Term " + result);
-//                    Log.d(TAG, "Term row: " + row);
+                    Log.d(TAG, "Term " + result);
+                    Log.d(TAG, "Term row: " + row);
                     cursor.moveToNext();
                 }
             }
@@ -66,7 +72,6 @@ public class HistoryListFragment extends ListFragment{
             toast = Toast.makeText(this.getContext(), "Database Unavailable", Toast.LENGTH_LONG);
             toast.show();
         }
-
     }
 
     @Override
@@ -85,21 +90,14 @@ public class HistoryListFragment extends ListFragment{
                 null,
                 null,
                 null);
+
         if (cursor.moveToFirst()) {
             term = cursor.getString(0);
             Log.v(TAG, "id to term: " + term);
         }
-//        resultActivity.doTermSearch(term);
-//        FragmentTransaction transaction = fragmentManager.beginTransaction();
-//        transaction.replace(R.id.content_frame, resultActivity).commit();
 
         Intent intent = new Intent(getActivity(), ResultActivity.class);
         intent.putExtra(ResultActivity.TERM_ON_CLICK, term);
         getActivity().startActivity(intent);
-//        resultActivity.doTermSearch(term);
-//        FragmentTransaction transaction = fragmentManager.beginTransaction();
-//        transaction.replace(R.id.content_frame, resultActivity).commit();
-//        FragmentTransaction transaction = fragmentManager.beginTransaction();
-//        transaction.replace(R.id.content_frame, resultActivity).commit();
     }
 }
