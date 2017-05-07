@@ -4,7 +4,7 @@
 
 <img width="350" alt="switch2" src="https://cloud.githubusercontent.com/assets/13029161/25784507/06fffdf8-3323-11e7-8bb4-51075f69e050.png"><img width="350" alt="switch3" src="https://cloud.githubusercontent.com/assets/13029161/25784514/261a6188-3323-11e7-906d-f94965dec104.png">
 
-<img width="350" alt="switch4" src="https://cloud.githubusercontent.com/assets/13029161/25784516/32115c08-3323-11e7-885c-ca82682d239f.png"><img width="350" alt="switch6" src="https://cloud.githubusercontent.com/assets/13029161/25778182/8d60cbb6-32ab-11e7-8147-b7eae414233c.png">
+<img width="350" alt="switch4" src="https://cloud.githubusercontent.com/assets/13029161/25784516/32115c08-3323-11e7-885c-ca82682d239f.png"><img width="350" alt="switch5" src="https://cloud.githubusercontent.com/assets/13029161/25784456/3528aa78-3322-11e7-9184-2035fbe8ba22.png">
 
 <img width="350" alt="switch7" src="https://cloud.githubusercontent.com/assets/13029161/25784440/057f0ab0-3322-11e7-993d-2b7562b91dfb.png"><img width="350" alt="switch8" src="https://cloud.githubusercontent.com/assets/13029161/25784441/09bbaf16-3322-11e7-94cb-d2b496da3338.png">
 
