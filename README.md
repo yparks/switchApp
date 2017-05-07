@@ -1,3 +1,4 @@
 # switch
 
-<img width="366" alt="switch2" src="https://cloud.githubusercontent.com/assets/13029161/25777889/a3aefd98-32a1-11e7-9084-3f5814f9b566.png">
+
+<img width="300" alt="splashscreen_horizontal" src="https://cloud.githubusercontent.com/assets/13029161/25778040/8b9a9464-32a7-11e7-8e40-05f36b048ea2.png">
