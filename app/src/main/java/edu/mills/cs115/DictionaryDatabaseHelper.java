@@ -112,6 +112,8 @@ class DictionaryDatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(TERM_COL, term);
         contentValues.put(DEFINITION_COL, definition);
         contentValues.put(CATEGORY_COL, category);
+        //Changed the favorites column to 0
+        contentValues.put(FAVORITES_COL, 0);
         Log.d(TAG, "Row populated: " + contentValues);
         return sqlDatabase.insert(DICTIONARY_TABLE, null, contentValues);
     }
