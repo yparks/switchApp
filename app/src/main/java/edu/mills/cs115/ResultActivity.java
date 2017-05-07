@@ -104,10 +104,10 @@ public class ResultActivity extends Activity {
                 termView.setText(term);
 
                 //Definition
-                mWebView = (WebView) findViewById(R.id.definition);
-                mWebView.getSettings().setJavaScriptEnabled(true);
+                webDisplay = (WebView) findViewById(R.id.definition);
+                webDisplay.getSettings().setJavaScriptEnabled(true);
 
-                mWebView.loadData(definition, "text/html", null);
+                webDisplay.loadData(definition, "text/html", null);
 
                 //Add term and definition to database
                 addTermToHistory(term, definition);
