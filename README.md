@@ -1,6 +1,6 @@
 # switch
 
-"switch" is a dictionary app for android designed and built by Ashley Vo, Barbara Arango, Roberto Amparán, and Ying Parks in our Mobile App Programming class. It's aim is to provide a fresh and comical research experience for Professor Ellen Spertus' beginning Computer Science students at Mills College.
+"switch" is a dictionary app designed and implemented by Ashley Vo, Barbara Arango, Roberto Amparán, and Ying Parks in our Mobile App Programming class. It's aim is to provide a fresh and comical research experience for Professor Ellen Spertus' beginning Computer Science students at Mills College.
 <br>
 <br>
 <br>
