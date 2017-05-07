@@ -1,3 +1,3 @@
 # switch
 
-<img src="https://cloud.githubusercontent.com/assets/13029161/25777857/55592246-32a0-11e7-9bdb-b51708fb7d16.png">
+<img src="https://cloud.githubusercontent.com/assets/13029161/25777889/a3aefd98-32a1-11e7-9084-3f5814f9b566.png">
