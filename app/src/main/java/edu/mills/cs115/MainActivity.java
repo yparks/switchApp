@@ -3,7 +3,6 @@ package edu.mills.cs115;
 import android.app.SearchManager;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -57,11 +56,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Display icon in action bar
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        //Delete title
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         fragmentManager = getSupportFragmentManager();
@@ -81,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
                                 loadHomeFragment();
                                 break;
                             case R.id.action_history:
-                                //Set list fragment as instance of history class
                                 Log.d("MainActivity", "onNavigationItemSelected() " + item);
                                 transaction = fragmentManager.beginTransaction();
                                 listFragment = new HistoryListFragment();
@@ -118,24 +114,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the options menu from XML
         getMenuInflater().inflate(R.menu.search_menu, menu);
 
-        // Get the SearchView and set the searchable configuration
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
         ComponentName cn = new ComponentName(this, ResultActivity.class);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(cn));
 
         return true;
-    }
-
-    @Override
-    protected void onNewIntent(Intent intent) {
-        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            String query = intent.getStringExtra(SearchManager.QUERY);
-//            doSearch(query);
-        }
     }
 
     public Action getIndexApiAction() {
