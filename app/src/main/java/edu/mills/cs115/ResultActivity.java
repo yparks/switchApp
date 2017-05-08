@@ -31,8 +31,6 @@ public class ResultActivity extends Activity {
 
     private WebView webDisplay;
 
-    //Set the id obtained from the cursor to a class variable so that it could be accessed
-    //by onFavoriteClicked later.
     private int id;
 
     @Override
@@ -65,10 +63,9 @@ public class ResultActivity extends Activity {
      *
      * @author barango
      * @author Roberto Amparán (mr.amparan@gmail.com)
+     * @author Ashley Vo
      */
     public void doTermSearch(String query) {
-
-
         Log.v(TAG, "Reached doTermSearch() with " + query);
         try{
             SQLiteOpenHelper dictionaryDatabaseHelper = new DictionaryDatabaseHelper(this);
@@ -85,7 +82,7 @@ public class ResultActivity extends Activity {
             if (cursor.moveToFirst()){
                 Log.v(TAG, "cursor.moveToFirst()? " + cursor.moveToFirst());
 
-                //Setid obtained from the cursor to a class variable so that it could be accessed
+                // Set id obtained from the cursor to a class variable so that it could be accessed
                 //by onFavoriteClicked later.
                 id = cursor.getInt(0);
                 Log.v(TAG, "id: " + id);
@@ -113,7 +110,7 @@ public class ResultActivity extends Activity {
                 addTermToHistory(term, definition);
                 Log.v(TAG, "added term");
 
-                //Populate fav checkbox
+                //Populate favorite checkbox
                 CheckBox favorite = (CheckBox)findViewById(R.id.favorite);
                 favorite.setChecked(isFavorite);
                 Log.v(TAG, "declared checkBox");
@@ -128,8 +125,12 @@ public class ResultActivity extends Activity {
         }
     }
 
-    //Update database when checkbox is clicked
-    public void onFavoriteClicked (View view) {
+    /**
+     *Make a call to the UpdateFavorite Async class, passing along the ID of the term
+     *
+     * @author Ashley Vo
+     */
+    public void onFavoriteClicked () {
         Log.v(TAG, "Entered onFavoriteClicked()");
         new UpdateFavoriteTask().execute(id);
 
@@ -137,16 +138,28 @@ public class ResultActivity extends Activity {
         Log.v(TAG, "Exited onFavoriteClicked");
     }
 
+    /**
+     * Update the database when the checkbox is clicked
+     */
     private class UpdateFavoriteTask extends AsyncTask<Integer, Void, Boolean> {
         ContentValues termValues;
 
+        /**
+         * Loads and store the values of the favorite checkbox.
+         */
         protected void onPreExecute() {
             Log.v(TAG, "Entered onPreExecute()");
             CheckBox favorite = (CheckBox)findViewById(R.id.favorite);
             Log.v(TAG, "Declared favorite variable");
-            termValues = new ContentValues(); termValues.put(DictionaryDatabaseHelper.FAVORITES_COL, favorite.isChecked());
+            termValues = new ContentValues();
+            termValues.put(DictionaryDatabaseHelper.FAVORITES_COL, favorite.isChecked());
             Log.v(TAG, "Set termValues as ContentValues: " + termValues.toString());
         }
+        /**
+         * Update Dictionary table.
+         *
+         * @param terms array of term ID's
+         */
         protected Boolean doInBackground(Integer... terms) {
             Log.v(TAG, "Entered doInBackground");
             int termNo = terms[0];
@@ -163,6 +176,11 @@ public class ResultActivity extends Activity {
                 return false;
             }
         }
+        /**
+         * Display message if database is unavailable.
+         *
+         * @param success success, if database is available
+         */
         protected void onPostExecute(Boolean success) {
             Log.v(TAG, "Entered onPostExecute()");
             if (!success) {
