@@ -99,17 +99,13 @@ public class ResultActivity extends Activity {
                 Log.v(TAG, "cursor move to third?");
                 Log.v(TAG, "isFavorite: " + isFavorite);
 
-                //Term
                 TextView termView = (TextView) findViewById(R.id.term);
                 termView.setText(term);
 
-                //Definition
                 webDisplay = (WebView) findViewById(R.id.definition);
                 webDisplay.getSettings().setJavaScriptEnabled(true);
-
                 webDisplay.loadData(definition, "text/html", null);
 
-                //Add term and definition to database
                 addTermToHistory(term, definition);
                 Log.v(TAG, "added term");
 
@@ -179,6 +175,7 @@ public class ResultActivity extends Activity {
      *
      * @param term the term from the query
      * @param definition the definition from the query
+     * @return the row ID of the newly inserted row, or -1 if an error occurred
      *
      * @author Roberto Amparán (mr.amparan@gmail.com)
      */
