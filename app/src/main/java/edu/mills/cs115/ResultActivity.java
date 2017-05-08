@@ -126,7 +126,7 @@ public class ResultActivity extends Activity {
     }
 
     /**
-     *Make a call to the UpdateFavorite Async class, passing along the ID of the term
+     *Make a call to the UpdateFavorite Async class, passing along the ID of the term.
      *
      * @author Ashley Vo
      */
@@ -139,7 +139,9 @@ public class ResultActivity extends Activity {
     }
 
     /**
-     * Update the database when the checkbox is clicked
+     * Update the database when the checkbox is clicked.
+     *
+     * @author Ashley Vo
      */
     private class UpdateFavoriteTask extends AsyncTask<Integer, Void, Boolean> {
         ContentValues termValues;
