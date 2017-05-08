@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="code" pattern="(src[app]:edu.mills.cs115.AZCategoryAdapter||src[app]:edu.mills.cs115.AZCategoryFragment||src[app]:edu.mills.cs115.AZTermListFragment||src[app]:edu.mills.cs115.BaseFragment||src[app]:edu.mills.cs115.BuildConfig||src[app]:edu.mills.cs115.DictionaryBean||src[app]:edu.mills.cs115.DictionaryDatabaseHelper||src[app]:edu.mills.cs115.FavoritesListFragment||src[app]:edu.mills.cs115.HistoryDatabaseHelper||src[app]:edu.mills.cs115.HistoryListFragment||src[app]:edu.mills.cs115.MainActivity||src[app]:edu.mills.cs115.ResultActivity||src[app]:edu.mills.cs115.SplashActivity||src[app]:edu.mills.cs115.UserFragment||src[app]:edu.mills.cs115.HomeFragment)&amp;&amp;!src[app]:edu.mills.cs115.R" />
+</component>
