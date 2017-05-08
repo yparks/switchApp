@@ -24,6 +24,7 @@ import android.widget.Toast;
  *
  * @author barango
  * @author Roberto Amparán (mr.amparan@gmail.com)
+ * @author Ashley Vo
  */
 public class ResultActivity extends Activity {
     public static final String TERM_ON_CLICK = "";
@@ -126,11 +127,11 @@ public class ResultActivity extends Activity {
     }
 
     /**
-     *Make a call to the UpdateFavorite Async class, passing along the ID of the term.
+     * Makes a call to the UpdateFavorite Async class, passing along the ID of the term.
      *
      * @author Ashley Vo
      */
-    public void onFavoriteClicked () {
+    public void onFavoriteClicked (View view) {
         Log.v(TAG, "Entered onFavoriteClicked()");
         new UpdateFavoriteTask().execute(id);
 
@@ -139,7 +140,7 @@ public class ResultActivity extends Activity {
     }
 
     /**
-     * Update the database when the checkbox is clicked.
+     * Updates the database when the checkbox is clicked.
      *
      * @author Ashley Vo
      */
