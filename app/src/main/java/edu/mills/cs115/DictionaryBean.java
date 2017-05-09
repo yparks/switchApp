@@ -1,5 +1,10 @@
 package edu.mills.cs115;
 
+/**
+ * @author Ying Parks
+ * Dictionary Objec
+ *
+ */
 
 public class DictionaryBean {
   private String term;

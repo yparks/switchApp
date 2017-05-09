@@ -9,15 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- *
- *
+ * BaseFragment extension from fragment
+ * @author Ying Parks
  */
 public abstract class BaseFragment extends Fragment {
 
   protected Context mContext;
 
   /**
-   *
+   * Created class by Callback
    */
   @Override public void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -31,12 +31,13 @@ public abstract class BaseFragment extends Fragment {
   }
 
   /**
-   *
+   * Abstract class is declared, may not be instantiated, and requires a  subclass to provide implementation
+   * for abstract methods.
    */
   public abstract View initView();
 
   /**
-   *
+   * Created Activity by  Callback this method
    */
   @Override public void onActivityCreated(@Nullable Bundle savedInstanceState) {
     super.onActivityCreated(savedInstanceState);
@@ -44,7 +45,7 @@ public abstract class BaseFragment extends Fragment {
   }
 
   /**
-   *
+   * When subclass needs to connect with internet, rewrite this method to connect with internet
    */
   public void initData() {
 
