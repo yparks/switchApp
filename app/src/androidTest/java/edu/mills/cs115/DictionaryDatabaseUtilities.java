@@ -92,6 +92,7 @@ class DictionaryDatabaseUtilities extends SQLiteOpenHelper {
                 if (strings.length < 3) continue;
                 long id = addTerm(strings[0].trim(), strings[1].trim(), strings[2].trim());
                 loadTermsLong = id;
+                Log.d(TAG, "LongTermID is " + loadTermsLong + " ID is " + id);
                 if (id < 0) {
                     Log.d(TAG, "Unable to add word: " + strings[0].trim());
                 }
